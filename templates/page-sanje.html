@@ -1,0 +1,32 @@
+{% extends 'base-sanje.html' %}
+{% load static %}
+
+<head>
+    <title>{% block title %}{{ page_detail.title }}{% endblock %}</title>
+</head>
+<body class=" cms-page-view cms-about-us">
+{% block page_content  %}
+    <div class="page" id="page-container" >
+        <div class="top-bread"><div class="breadcrumbs">
+            <ul>
+                <li class="home">
+                    <a href="{% url 'homepage:home' %}" title="برو به صفحه‌ی خانگی">خانه</a>
+                    &nbsp;<span>&raquo;</span>&nbsp;
+                </li>
+                <li class="cms_page">
+                    <strong>{{ page_detail.title }}</strong>
+                </li>
+            </ul>
+        </div></div> <div class="page">
+        <div class="main-container col1-layout">
+            <div class="main">
+                <div class="col-main">
+                    <div class="std"><p><img alt="{{ page_detail.title }}" src="{{ page_detail.head_img.url }}" title="{{ page_detail.title }}" /></p>
+                        <h4 style="text-align: right;"></h4>
+                        <p style="text-align: right;"><strong>&nbsp;</strong></p>
+{#                        <p><img alt="LogoRadmehr" src="{% static 'img/logo/radmehr.png' %}" title="LogoRadmehr" /></p>#}
+                        <p>{{ page_detail.body | safe }}</p>
+            </div>
+        </div>
+    </div><!-- END page -->
+{% endblock %}

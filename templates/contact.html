@@ -1,0 +1,118 @@
+{%  extends 'base.html' %}
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}تماس با ما{% endblock %}</title>
+</head>
+{% block page_content %}
+     <div class="full_page_photo">
+          <div id="map"></div>
+          <div class="container">
+               <div class="hgroup">
+                    <div class="hgroup_title animated bounceInUp ">
+                         <div class="container">
+                              <h1>ارتباط با ما</h1>
+                         </div>
+                    </div>
+                    <div class="hgroup_subtitle animated bounceInUp skincolored">
+                         <div class="container">
+                              <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div class="main">
+          <div class="container triangles-of-section">
+               <div class="triangle-up-left"></div>
+               <div class="square-left"></div>
+               <div class="triangle-up-right"></div>
+               <div class="square-right"></div>
+          </div>
+          <div class="container">
+               <section>
+                    <div class="row">
+                         <div class="office_address col-sm-6 col-md-4">
+                              <div class="team_member"> <img src="images/plethora_logo.png"  alt="logo">
+                                   <h5>میهن وبمستر</h5>
+                                   <small>دانلود منابع طراحی وب و گرافیک</small><br>
+                                   <address>
+                                   ایران تهران<br>
+                                   شهرک غرب برج بلور<br>
+                                   </address>
+                                   <abbr title="Phone">تلفن:</abbr> (98) 2152-5514<br>
+                                   <abbr title="Phone">ایمیل:</abbr> <a href="mailto:#">first.last@example.com</a> </div>
+                         </div>
+                         <div class="contact_form col-sm-6 col-md-8">
+                              <form name="contact_form" id="contact_form" method="post">
+                                   <div class="row">
+                                        <div class="col-sm-6 col-md-6">
+                                             <label>نام</label>
+                                             <input name="name" id="name" class="form-control" type="text" value="">
+                                        </div>
+                                        <div class="col-sm-6 col-md-6">
+                                             <label>ایمیل</label>
+                                             <input name="email" id="email" class="form-control" type="text" value="">
+                                        </div>
+                                   </div>
+                                   <div class="row">
+                                        <div class="col-sm-12 col-md-12">
+                                             <label>موضوع</label>
+                                             <input name="subject" id="subject" class="form-control" type="text">
+                                        </div>
+                                   </div>
+                                   <div class="row">
+                                        <div class="col-sm-12 col-md-12">
+                                             <label>پیام</label>
+                                             <textarea name="message" id="message" rows="8" class="form-control"></textarea>
+                                        </div>
+                                        <div class="col-sm-12 col-md-12"><br/>
+                                             <a id="submit_btn" class="btn btn-primary" name="submit">ثبت پیام</a> <span id="notice" class="alert alert-warning alert-dismissable hidden" style="margin-left:20px;"></span> </div>
+                                   </div>
+                              </form>
+                         </div>
+                    </div>
+               </section>
+          </div>
+
+     <!-- 
+You need to include the following 2 scripts on any page that has a Google Map BEFORE the Cleanstart_theme.js.
+When using Google Maps on your own site you MUST signup for your own API key at:
+https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+After your sign up replace the key in the URL below or paste in the new script tag that Google provides.
+-->
+     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhCFO56k_xL212g8j2LK88wK0I_CRwzDE&amp;sensor=false"></script>
+     <script type="text/javascript" src="{% static 'js/google_map.js' %}"></script>
+     <!--The Theme Required Js -->
+     <script type="text/javascript" src="{% static 'js/cleanstart_theme.js' %}"></script>
+     <!--Contact Form Required Js -->
+     <script type="text/javascript" src="{% static 'js/contact_form.js' %}"></script>
+     <!--Style Switcher, You propably want to remove this!-->
+     <script type="text/javascript" src="{% static 'js/style_switcher.js' %}"></script>
+     <div class="style_switcher">
+          <div class="gear"><i class="fa fa-gear"></i></div>
+          <div class="styles">
+               <h6>Style Switcher</h6>
+               <ul>
+                    <li class="style-classic"><i class="fa fa-circle"></i> Blue Default</li>
+                    <li class="style-golden"><i class="fa fa-circle"></i> Golden</li>
+                    <li class="style-purple"><i class="fa fa-circle"></i> Purple</li>
+               </ul>
+               <p></p>
+               <ul>
+                    <li class="style-onepage"><a href="onepage.html"><i class="fa fa-desktop"></i> One-Pager</a></li>
+               </ul>
+               <p></p>
+               <ul>
+                    <li><a href="Documentation/index-2.html"><i class="fa fa-flag"></i> Documentation</a></li>
+               </ul>
+          </div>
+     </div>
+     <!--END Style Switcher-->
+{% endblock %}
+</div>
+</body>
+</html>

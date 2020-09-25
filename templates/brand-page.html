@@ -1,0 +1,239 @@
+{% extends 'base-sanje.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <title>{% block title %}{{  brand_detail.brand_name }}{% endblock %}</title>
+</head>
+<body class=" shopbybrand-index-view">
+{% block page_content  %}
+    <div class="page" id="page-container" >
+        <div class="top-bread"><div class="breadcrumbs">
+            <ul>
+                <li class="home">
+                    <a href="{% url 'homepage:home' %}" title="برو به صفحه‌ی اصلی">خانه</a>
+                    &nbsp;<span>&raquo;</span>&nbsp;
+                </li>
+                <li class="brand">
+                    <a href="{% url 'brands:brand' %}" title="نام‌های تجاری">نام‌های تجاری</a>
+                    &nbsp;<span>&raquo;</span>&nbsp;
+                </li>
+                <li class="view">
+                    <strong>{{ brand_detail.brand_name }}</strong>
+                </li>
+            </ul>
+        </div></div>
+        <div class="page">
+            <div class="main-container col2-right-layout">
+                <div class="main">
+                    <div class="col-main">
+                        <div class="brand-description">
+                            <div class="blogo"><img src="{{ brand_detail.brand_logo.url }}" title='{{ brand_detail.brand_name }}' border='0' align='left'/></div>
+                            <div class="des" >
+                                <p style="text-align: justify;">{{ brand_detail.brand_description }}</p>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            //<![CDATA[
+                            enUS = {"m":{"wide":["January","February","March","April","May","June","July","August","September","October","November","December"],"abbr":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]}}; // en_US locale reference
+                            Calendar._DN = ["\u06cc\u06a9\u0634\u0646\u0628\u0647","\u062f\u0648\u0634\u0646\u0628\u0647","\u0633\u0647\u200c\u0634\u0646\u0628\u0647","\u0686\u0647\u0627\u0631\u0634\u0646\u0628\u0647","\u067e\u0646\u062c\u0634\u0646\u0628\u0647","\u062c\u0645\u0639\u0647","\u0634\u0646\u0628\u0647"]; // full day names
+                            Calendar._SDN = ["\u06cc\u06a9\u0634\u0646\u0628\u0647","\u062f\u0648\u0634\u0646\u0628\u0647","\u0633\u0647\u200c\u0634\u0646\u0628\u0647","\u0686\u0647\u0627\u0631\u0634\u0646\u0628\u0647","\u067e\u0646\u062c\u0634\u0646\u0628\u0647","\u062c\u0645\u0639\u0647","\u0634\u0646\u0628\u0647"]; // short day names
+                            Calendar._FD = 6; // First day of the week. "0" means display Sunday first, "1" means display Monday first, etc.
+                            Calendar._MN = ["\u0698\u0627\u0646\u0648\u06cc\u0647\u0654","\u0641\u0648\u0631\u06cc\u0647\u0654","\u0645\u0627\u0631\u0633","\u0622\u0648\u0631\u06cc\u0644","\u0645\u0647\u0654","\u0698\u0648\u0626\u0646","\u0698\u0648\u0626\u06cc\u0647\u0654","\u0627\u0648\u062a","\u0633\u067e\u062a\u0627\u0645\u0628\u0631","\u0627\u06a9\u062a\u0628\u0631","\u0646\u0648\u0627\u0645\u0628\u0631","\u062f\u0633\u0627\u0645\u0628\u0631"]; // full month names
+                            Calendar._SMN = ["\u0698\u0627\u0646\u0648\u06cc\u0647\u0654","\u0641\u0648\u0631\u06cc\u0647\u0654","\u0645\u0627\u0631\u0633","\u0622\u0648\u0631\u06cc\u0644","\u0645\u0647\u0654","\u0698\u0648\u0626\u0646","\u0698\u0648\u0626\u06cc\u0647\u0654","\u0627\u0648\u062a","\u0633\u067e\u062a\u0627\u0645\u0628\u0631","\u0627\u06a9\u062a\u0628\u0631","\u0646\u0648\u0627\u0645\u0628\u0631","\u062f\u0633\u0627\u0645\u0628\u0631"]; // short month names
+                            Calendar._am = "\u0642\u0628\u0644\u200c\u0627\u0632\u0638\u0647\u0631"; // am/pm
+                            Calendar._pm = "\u0628\u0639\u062f\u0627\u0632\u0638\u0647\u0631";
+                            // tooltips
+                            Calendar._TT = {};
+                            Calendar._TT["INFO"] = 'درباره‌ی تقویم';
+                            Calendar._TT["ABOUT"] =
+                                'گزینش گر تاریخ/زمان DHTML\n' +
+                                "(c) dynarch.com 2002-2005 / Author: Mihai Bazon\n" +
+                                'برای بازدید آخرین نسخه: http://www.dynarch.com/projects/calendar/\n' +
+                                'توزیع شده تحت GNU LGPL. برای جزییات http://gnu.org/licenses/lgpl.html را ببینید.' +
+                                '\n\n' +
+                                'انتخاب تاریخ:\n' +
+                                '- برای انتخاب سال دکمه‌های \xab, \xbb را به کار ببرید\n' +
+                                '- برای انتخاب ماه دکمه‌های \u2039 را به کار ببرید\n' +
+                                '- برای انتخاب سریع‌تر کلیک موس را بر روی هر یک از دکمه‌های فوق نگه دارید.';
+                            Calendar._TT["ABOUT_TIME"] = '\n\n' +
+                                'انتخاب زمان:\n' +
+                                '- برای افزایش دادن هر یک از بخش‌های زمان بر روی آن کلیک کنید\n' +
+                                '- یا Shift-click کنید تا آن را کاهش دهید\n' +
+                                '- یا برای انتخاب سریع‌تر آن کلیک و درگ کنید.';
+                            Calendar._TT["PREV_YEAR"] = 'سال قبل (برای منو نگه دارید)';
+                            Calendar._TT["PREV_MONTH"] = 'ماه قبل (برای منو نگه دارید)';
+                            Calendar._TT["GO_TODAY"] = 'برو به امروز';
+                            Calendar._TT["NEXT_MONTH"] = 'ماه بعد (برای منو نگه دارید)';
+                            Calendar._TT["NEXT_YEAR"] = 'سال بعد (برای منو نگه دارید)';
+                            Calendar._TT["SEL_DATE"] = 'انتخاب تاریخ';
+                            Calendar._TT["DRAG_TO_MOVE"] = 'برای جابجایی بکشید';
+                            Calendar._TT["PART_TODAY"] = ' (' + "\u0627\u0645\u0631\u0648\u0632" + ')';
+                            // the following is to inform that "%s" is to be the first day of week
+                            Calendar._TT["DAY_FIRST"] = 'نمایش %s در ابتدا';
+                            // This may be locale-dependent. It specifies the week-end days, as an array
+                            // of comma-separated numbers. The numbers are from 0 to 6: 0 means Sunday, 1
+                            // means Monday, etc.
+                            Calendar._TT["WEEKEND"] = "5";
+                            Calendar._TT["CLOSE"] = 'بستن';
+                            Calendar._TT["TODAY"] = "\u0627\u0645\u0631\u0648\u0632";
+                            Calendar._TT["TIME_PART"] = 'برای تغییر مقدار (Shift-(Click یا درگ کنید';
+                            // date formats
+                            Calendar._TT["DEF_DATE_FORMAT"] = "%e %b %Y";
+                            Calendar._TT["TT_DATE_FORMAT"] = "%e %B %Y";
+                            Calendar._TT["WK"] = "\u0647\u0641\u062a\u0647";
+                            Calendar._TT["TIME"] = 'زمان:';
+                            //]]>
+                        </script>
+                        <div id="map-popup" class="map-popup" style="display:none;">
+                            <a href="#" class="map-popup-close" id="map-popup-close">x</a>
+                            <div class="map-popup-arrow"></div>
+                            <div class="map-popup-heading"><h2 id="map-popup-heading"></h2></div>
+                            <div class="map-popup-content" id="map-popup-content">
+                                <div class="map-popup-checkout">
+                                    <form action="" method="POST" id="product_addtocart_form_from_popup">
+                                        <input type="hidden" name="product" class="product_id" value="" id="map-popup-product-id" />
+                                        <div class="additional-addtocart-box">
+                                        </div>
+                                        <button type="button" title="افزودن به سبد" class="button btn-cart" id="map-popup-button"><span><span>افزودن به سبد</span></span></button>
+                                    </form>
+                                </div>
+                                <div class="map-popup-msrp" id="map-popup-msrp-box"><strong>قیمت:</strong> <span style="text-decoration:line-through;" id="map-popup-msrp"></span></div>
+                                <div class="map-popup-price" id="map-popup-price-box"><strong>قیمت واقعی:</strong> <span id="map-popup-price"></span></div>
+                                <script type="text/javascript">
+                                    //<![CDATA[
+                                    document.observe("dom:loaded", Catalog.Map.bindProductForm);
+                                    //]]>
+                                </script>
+                            </div>
+                            <div class="map-popup-text" id="map-popup-text">Our price is lower than the manufacturer's &quot;minimum advertised price.&quot; As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.</div>
+                            <div class="map-popup-text" id="map-popup-text-what-this">Our price is lower than the manufacturer's &quot;minimum advertised price.&quot; As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.</div>
+                        </div>
+                        <div class="category-overlay">
+                            <div id="addedoverlay" style='display:none'> </div>
+                            <div id='added' style='display:none'></div>
+                        </div>
+                        <a class="back-to" href="javascript: history.go(-1)">Return to Previous Page</a>
+                        <div class="page-title category-title">
+                            <h1>دلونگی</h1>
+                        </div>
+                        <div class="category-products">
+                            <div class="products-grid columns3">
+                                {% for theproduct in products %}
+                                    <!-- box -->
+                                    <div class="box-product-item">
+                                        <div class="view-first">
+                                            <div class="view-content">
+                                                <div class="image out-of-stock" >
+                                                    <a href="https://sanjehkish.com/kc-280-7784.html" id="productimgover7784">
+                                                        {#                                                <img src="{% static 'sanjekish//media/catalog/product/cache/1/small_image/217x217/9df78eab33525d08d6e5fb8d27136e95/h/s/hs-1101.jpg' %}" alt="پایه کامل همزن KF 350" />#}
+                                                        <img src="{{ theproduct.product_image.url }}" alt="{{ theproduct.product_name }}" />
+                                                    </a>
+                                                </div>
+                                                <div class="name" id='productname7784'>
+                                                    <a href="https://sanjehkish.com/kc-280-7784.html" title="{{ theproduct.product_name }}">{{ theproduct.product_name }}</a>
+                                                </div>
+                                                <div class="top-features">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                                <!--/ box-->
+                            </div>
+                            <script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script>
+                            <script type="text/javascript">
+                                jQuery.noConflict();
+                                jQuery('.fancybox').fancybox({
+                                    hideOnContentClick : true,
+                                    width: 620,
+                                    autoDimensions: true,
+                                    type : 'iframe',
+                                    showTitle: false,
+                                    scrolling: 'no',
+                                    onComplete: function(){ //Resize the iframe to correct size
+                                        jQuery('#fancybox-frame').load(function() { // wait for frame to load and then gets it's height
+                                            jQuery('#fancybox-content').height(jQuery(this).contents().find('body').height()+30);
+                                            jQuery.fancybox.resize();
+                                        });
+                                    }
+                                });
+
+
+                                function setLocationAjax(url,id){
+                                    url += 'isAjax/1';
+                                    url = url.replace("checkout/cart","ajax/index");
+                                    var msgHtml;
+                                    var productImg = jQuery('#productimgover' + id).html();
+                                    var windowOver = jQuery('#addedoverlay');
+                                    var windowBox = jQuery('#added');
+                                    var titleForBox = jQuery('#productname' + id).text();
+                                    windowOver.show(); {% static 'sanjekish/' %}
+                                    windowBox.show().css({
+                                        backgroundImage: "url('{% static 'sanjekish/skin/frontend/default/atd/images/loading.gi' %}f')"
+                                    });
+                                    try {
+                                        jQuery.ajax( {
+                                            url : url,
+                                            dataType : 'json',
+                                            success : function(data) {
+                                                if(data.status == 'SUCCESS'){
+                                                    msgHtml = '<div class="added-content"><div>' + productImg + '</div><em>' + titleForBox + '</em><p>was successfully added to your shopping cart.</p><a id="hidewindow" href="javascript:void(0);">Continue shopping</a>&nbsp;<a href="https://sanjehkish.com/checkout/cart/">سبدخرید و تسویه</a></div>';
+                                                }else{
+                                                    msgHtml = '<div class="added-content"><p class="error-msg" style="margin-bottom:15px;">' + data.message + '</p><a id="hidewindow" href="javascript:void(0);">Continue shopping</a>&nbsp;<a href="https://sanjehkish.com/checkout/cart/">سبدخرید و تسویه</a></div>';
+                                                }
+                                                setAjaxData(data,false);
+                                                windowBox.css({
+                                                    backgroundImage: 'none'
+                                                }).html(msgHtml);
+                                                windowOver.one('click',function(){
+                                                    hidewindow(windowBox,windowOver);
+                                                });
+                                                jQuery('#hidewindow').click(function(){
+                                                    hidewindow(windowBox,windowOver);
+                                                });
+                                            }
+                                        });
+                                    } catch (e) {
+                                    }
+                                }
+                                function hidewindow(windowBox,windowOver){
+                                    windowOver.fadeOut(400);
+                                    windowBox.fadeOut(400).html('');
+                                }
+                                function hideImage(img){
+                                    jQuery(img).animate({
+                                        'opacity' : 0
+                                    },150);
+                                }
+                                function showImage(img){
+                                    jQuery(img).animate({
+                                        'opacity' : 1
+                                    },150);
+                                }
+                            </script>
+                        </div>
+                    </div>
+{#                    <div class="col-right sidebar">#}
+{#                        <div class="block left-categorys">#}
+{#                            <div class="block-title"><h2>طبقه‌بندی محصولی {{ brand_detail.brand_name }}</h2></div>#}
+{#                            <div class="block-content left-categorys-container">#}
+{#                                {% for theproductcategory in brand_detail %}#}
+{#                                <a href="#">{{ brand_detail.brand_product_category }}</a>#}
+{#                                {% endfor %}#}
+{#                                <a href="https://sanjehkish.com/food-processor.html">غذاساز</a>#}
+{#                                <a href="https://sanjehkish.com/hot-beverage.html">نوشیدنی‌ گرم</a>#}
+{#                                <a href="https://sanjehkish.com/cleaning-and-ironing.html">نظافت و اتوکشی</a>#}
+{#                                <a href="https://sanjehkish.com/cooling-heating-purifier.html">حرارتی،برودتی و تصفیه</a>#}
+{#                                <a href="https://sanjehkish.com/scales.html">ترازوها</a>#}
+{#                                <a href="https://sanjehkish.com/brands.html">برندها</a>#}
+{#                                <a href="https://sanjehkish.com/accessories.html">لوازم جانبی</a>#}
+{#                                <a href="https://sanjehkish.com/personal-care.html">لوازم شخصی برقی</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+                </div>
+            </div>
+        </div>
+{% endblock %}

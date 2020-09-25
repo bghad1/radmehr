@@ -1,0 +1,51 @@
+﻿{% extends 'base-sanje.html' %}
+{% load static %}
+<head>
+    <title>{% block title %}برندها{% endblock %}</title>
+</head>
+{% block page_content  %}
+    <div class="page" id="page-container" >
+        <div class="top-bread">
+            <div class="breadcrumbs">
+                <ul>
+                    <li class="home">
+                        <a href="{% url 'homepage:home' %}" title="برو به صفحه‌ی خانگی">خانه</a>
+                        &nbsp;<span>&raquo;</span>&nbsp;
+                    </li>
+                    <li class="socialvoice">
+                        <strong>نام‌های تجاری</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page">
+            <div class="main-container col1-layout">
+                <div class="main">
+                    <div class="col-main">
+                        <div class="shopbybrand-list">
+                            <div class="brands">
+                                <ul class="col">
+                                    {% for thebrand in brand %}
+                                        <li class="box">
+                                            {#<span><img src="{% static 'sanjekish/media/brands/thumbnail/1/125x/delonghi.png' %}"/></span>#}
+                                            <span><img src="{{ thebrand.brand_logo.url }}"/></span>
+                                            <b>
+                                                <h2>{{ thebrand.brand_name }}</h2>
+                                                <p>
+                                                <p style="text-align: justify;">{{ thebrand.brand_description }}</p>
+                                                </p>
+                                                <a class="button" href="{% url 'brands:brand_detail' thebrand.brand_name %}">
+                                                <span>
+                                                    <span>مشاهده‌ی کالاها</span>
+                                                </span>
+                                                </a>
+                                            </b>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div> </div>
+                </div>
+            </div>
+        </div><!-- END page -->
+{% endblock %}

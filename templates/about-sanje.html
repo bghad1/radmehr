@@ -1,0 +1,115 @@
+{% extends 'base-sanje.html' %}
+{% load static %}
+
+<body class=" cms-page-view cms-about-us">
+{% block page_content  %}
+    <div class="page" id="page-container" >
+        <div class="top-bread"><div class="breadcrumbs">
+            <ul>
+                <li class="home">
+                    <a href="{% url 'homepage:home' %}" title="برو به صفحه‌ی خانگی">خانه</a>
+                    &nbsp;<span>&raquo;</span>&nbsp;
+                </li>
+                <li class="cms_page">
+                    <strong>درباره ما</strong>
+                </li>
+            </ul>
+        </div></div> <div class="page">
+        <div class="main-container col1-layout">
+            <div class="main">
+                <div class="col-main">
+                    <div class="std"><p><img alt="HeaderAboutUs" src="{% static 'sanjekish//media/wysiwyg/aboutus/about-us.jpg' %}" title="HeaderAboutUs" /></p>
+                        <h4 style="text-align: right;"></h4>
+                        <p style="text-align: right;"><strong>&nbsp;</strong></p>
+                        <p><img alt="LogoRadmehr" src="{% static 'img/logo/radmehr.png' %}" title="LogoRadmehr" /></p>
+                        {% for theabout in about_detail %}
+                        <p>{{ theabout.about_description }}</p>
+                        {% endfor %}
+{#                        #}
+{#                        <p style="text-align: justify;">شرکت بازرگانی سنجه کیش در سال ۱۳۶۸ فعالیت خود را تحت عنوان عرضه کننده لوازم خانگی کوچک برقی آغاز نمود . بسیاری از محصولات لوازم خانه و آشپزخانه کوچک برقی مانند مولینکس فرانسه ، پترا الکتریک آلمان ، پیکارد و موزر ، همچنین ظروف چینی باواریا ، به واسطه واردات و عرضه این مجموعه به خانه های شما عزیزان راه پیدا کرد و به بخشی از خاطرات خوش روزهای گذشته بدل گردید .</p>#}
+{#                        <p style="text-align: justify;">در سال ۱۳۷۷ شرکت سنجه کیش همکاری ماندگار خود را با گروه دلونگی آغاز نمود و بعنوان تنها نماینده رسمی محصولات دلونگی در ایران به گسترش فعالیت با برترینهای صنعت لوازم خانگی برقی ادامه داد .</p>#}
+{#                        <p style="text-align: justify;">شرکت سنجه کیش در حال حاضر بعنوان تنها نماینده رسمی وانحصاری محصولات دلونگی ایتالیا ، پــولتی ، لاراستار سوئیس ، فـــلر و مـتئوی آلمان با تجربه ای ۲۸ ساله در ارائه محصولات لوازم برقی کوچک منزل و خدمات پس از فروش گسترده در حال فعالیت میباشد .</p>#}
+{#                        <p></p>#}
+{#                        <p style="text-align: right;"><strong>خدمات پس از فروش<strong>:</strong> </strong></p>#}
+{#                        <p style="text-align: justify;">ما با ۲۴ ماه گارانتی و ۱۲۰ ماه خدمات پس از فروش برای تمامی محصولات ارائه شده ، حامی مشتریانمان هستیم .</p>#}
+{#                        <p style="text-align: justify;">همچنین با شبکه گسترده ای از نمایندگان خدمات پس از فروش در بیش از ۱۲۰ نقطه ی کشور در خدمت شما عزیزان میباشیم .</p>#}
+{#                        <p style="text-align: justify;">در سال ۱۳۹۴ به جهت رفاه حال مصرف کنندگان و امکان ارائه خدمات پس از فروش در سراسر کشور ، خدمتی نوین را ارائه نمودیم . به سبب صرفه جویی در وقت و هزینه ، همچنین ارائه خدمات پس از فروش و تعمیرات با بهترین کیفیت در واحد تعمیرات مرکزی واقع در تهران ، کالا از درب منزل شما دریافت خواهد شد و پس از تعمیرات ، از طریق پست و شرکتهای حمل و نقل معتبر برای شما ارسال خواهد شد و شما تنها هزینه ارسال و دریافت پستی را پرداخت خواهید نمود.</p>#}
+{#                        <p style="text-align: justify;">با شماره گیری ۲۳۲۸ - ۰۲۱از سراسر کشور میتوانید با واحد امور مشتریان تماس حاصل نموده تا همکاران ما راهنمای شما باشند .</p>#}
+{#                        <p style="text-align: justify;"></p>#}
+{#                        <p style="text-align: justify;"></p>#}
+{#                        <p><img alt="viewpolerumi" height="400" src="/media/wysiwyg/aboutus/poleromishop.jpg" style="float: left;" title="viewpolerumi" width="400" /></p>#}
+{#                        <p style="text-align: justify;"><strong>آموزش و آشپزی: &nbsp;</strong></p>#}
+{#                        <p style="text-align: justify;">شرکت سنجه کیش با نگاهی ویژه به مبحث بروز رسانی ، آموزش استفاده صحیح از دستگاهها و شناخت عملکرد آن جهت مصرف بهینه و مطلوب ، مرکز " آموزش و آشپزی" را ایجاد نموده و روش های پخت و پـز با دستگاههای جدید را به شما آموزش خواهد داد .</p>#}
+{#                        <p style="text-align: justify;">شما میتوانید برای برقراری ارتباط با بخش های مختلف با شماره تلفن ۲۳۲۸ - ۰۲۱ &nbsp;تماس حاصل فرمایید.</p>#}
+{#                        <p style="text-align: justify;"><strong>گروه های کالایی :</strong></p>#}
+{#                        <p style="text-align: justify;"><a href="/food-processor.html">غذاساز</a></p>#}
+{#                        <p style="text-align: justify;"><a href="/cooking.html" title="cooking">&nbsp;پخت و پز</a></p>#}
+{#                        <p style="text-align: justify;"><a href="/hot-beverage.html">&nbsp;نوشیدنی گرم&nbsp;</a></p>#}
+{#                        <p style="text-align: justify;"><a href="/cleaning-and-ironing.html">لوازم اتوکشی و تمیزکاری</a></p>#}
+{#                        <p style="text-align: justify;"><a href="/cooling-heating-purifier.html">وسایل سرمایشی و گرمایشی</a></p>#}
+{#                        <p style="text-align: justify;"><a href="#">لوازم آرایشی و بهداشتی</a></p>#}
+{#                        <p style="text-align: justify;"><a href="/cooling-heating-purifier.html">تصفیه کننده&nbsp;</a></p>#}
+{#                        <p style="text-align: justify;"><a href="/gifts.html">کادویی</a></p>#}
+{#                        <p style="text-align: justify;"><strong>فروشگاه های عرضه مستقیم:</strong></p>#}
+{#                        <p style="text-align: justify;">شرکت سنجه کیش هم اکنون دارای هفت فروشگاه اختصاصی میباشد که چهار فروشگاه ما در جزیره زیبای کیش و مابقی در تهران میباشد .</p>#}
+{#                        <p style="text-align: justify;">این فروشگا هها در میان مشتریانمان به نمایندگی دلونگی و فـــلر معروف میباشند .&nbsp;</p>#}
+{#                        #}
+{#                        <p style="text-align: justify;"><strong>فروشگاه های تهران:&nbsp;</strong></p>#}
+{#                        <p></p>#}
+{#                        <p><strong><a href="/polerumi">فروشگاه پل رومی:<img alt="poleromi" height="235" src="/media/wysiwyg/aboutus/325X235/polerumi.jpg" style="float: right;" title="poleromi" width="325" /></a></strong></p>#}
+{#                        <p>تهران، بالاتر از پل صدر، نرسیده به پل رومی، پلاک ۱۷۷۸ &ndash; فروشگاه دلونگی و فلر</p>#}
+{#                        <p><strong>سـاعـات بـازدیـد </strong><br />روزهای شنبه تا پنجشنبه : ۹ تا ۲۲ &nbsp;&nbsp;/&nbsp;&nbsp; جمعه ها : ۱۰ تا ۲۰ </p>#}
+{#                        <p><strong>شمـاره تماس فروشگاه پل رومی:&nbsp;</strong></p>#}
+{#                        <p><strong><span>۲۲۶۳۰۵۵۸ &ndash; ۰۲۱</span></strong></p>#}
+{#                        <p><strong>شمـاره تماس خدمات پل رومی:&nbsp;</strong></p>#}
+{#                        <p><strong><span>۲۲۶۱۶۲۴۴ &ndash; ۰۲۱</span></strong></p>#}
+{#                        <p><strong><span>&nbsp;</span></strong></p>#}
+{#                        <p><strong><span>&nbsp;</span></strong></p>#}
+{#                        <p><strong><a href="/narmak">فروشگاه نارمک:</a><a href="/narmak"><img alt="poleromi" height="240" src="/media/wysiwyg/aboutus/325X235/narmak.jpg" style="float: right;" title="Narmak" width="330" /></a></strong></p>#}
+{#                        <p>تهران، پایین تر از میدان هفت حوض، نرسیده به چهارراه تلفن خانه، جنب بانک پارسیان، پلاک ۴۲۹ &ndash; فروشگاه دلونگی و فلر</p>#}
+{#                        <p><strong>سـاعـات بـازدیـد </strong><br />روزهای شنبه تا پنجشنبه : ۹ تا ۲۲ &nbsp;&nbsp;/&nbsp;&nbsp; جمعه ها : ۱۰ تا ۲۰ </p>#}
+{#                        <p><strong>شمـاره تماس فروشگاه نارمک:&nbsp;</strong></p>#}
+{#                        <p><strong><span>۷۷۹۰۵۱۱۵ &ndash; ۰۲۱</span></strong></p>#}
+{#                        <p><strong>شمـاره تماس خدمات نارمک:&nbsp;</strong></p>#}
+{#                        <p><strong><span>۷۷۹۴۴۰۵۴ &ndash; ۰۲۱</span></strong></p>#}
+{#                        <p><strong><span>&nbsp;</span></strong></p>#}
+{#                        <p><strong><span>&nbsp;</span></strong></p>#}
+{#                        <p><strong><span>&nbsp;</span></strong></p>#}
+{#                        <p><strong><a href="/tirajeh">فروشگاه تیراژه:</a><a href="/tirajeh"><img alt="tirajeh" height="240" src="/media/wysiwyg/aboutus/325X235/tirajeh.jpg" style="float: right;" title="Tirajeh" width="330" /></a></strong></p>#}
+{#                        <p>تهران، بلوار اشرفی اصفهانی، مجتمع تیراژه، طبقه همکف، واحد ۴۵ و ۴۶ &ndash; فروشگاه دلونگی و فلر</p>#}
+{#                        <p><strong>سـاعـات بـازدیـد</strong><br />همه روزه : ۱۰ تا ۲۲:۳۰ </p>#}
+{#                        <p><strong>شمـاره تماس:&nbsp;</strong></p>#}
+{#                        <p><strong><span>۴۴۴۹۱۶۰۵ &ndash; ۰۲۱</span></strong></p>#}
+{#                        <p><strong><span>&nbsp;</span></strong></p>#}
+{#                        <p><strong><span>&nbsp;</span></strong></p>#}
+{#                        <p style="text-align: justify;"><strong>فروشگاه های کیش:&nbsp;</strong></p>#}
+{#                        <p><strong><a href="/pardis-2">فروشگاه پردیس ۲:</a><a href="/pardis-2"><img alt="Pardis-2" height="240" src="/media/wysiwyg/aboutus/325X235/pardis-2.jpg" style="float: right;" title="Pardis-2" width="330" /></a></strong></p>#}
+{#                        <p>کیش - بازار پردیس ۲ &ndash; غرفه ۹۵ و ۹۶ &ndash; فروشگاه دلونگی و فلر</p>#}
+{#                        <p><strong>سـاعـات بـازدیـد</strong><br />همه روزه صبح‌ها از ساعت ۱۰ تا ۱۳:۳۰ و بعدازظهرها از ساعت ۱۷:۳۰ تا ۲۲:۳۰ </p>#}
+{#                        <p><strong>شمـاره تماس:&nbsp;</strong></p>#}
+{#                        <p><strong><span>۴۴۴۵۶۳۳۹ &ndash; ۰۷۶</span></strong></p>#}
+{#                        <p><strong><span>&nbsp;</span></strong></p>#}
+{#                        <p><strong><span>&nbsp;</span></strong></p>#}
+{#                        <p><strong><a href="/pardis-1">فروشگاه پردیس ۱:</a><a href="/pardis-1"><img alt="Pardis-1" height="240" src="/media/wysiwyg/aboutus/325X235/pardis-1.jpg" style="float: right;" title="Pardis-1" width="330" /></a></strong></p>#}
+{#                        <p>کیش - مرکز تجاری پردیس ۱- غرفه ۵۱ &ndash; &ndash; فروشگاه دلونگی و فلر</p>#}
+{#                        <p><strong>سـاعـات بـازدیـد</strong><br />همه روزه صبح‌ها از ساعت ۱۰ تا ۱۳:۳۰ و بعدازظهرها از ساعت ۱۷:۳۰ تا ۲۲:۳۰</p>#}
+{#                        <p><strong>شمـاره تماس:&nbsp;</strong></p>#}
+{#                        <p><strong><span>۴۴۴۵۶۱۶۹ &ndash; ۰۷۶</span></strong></p>#}
+{#                        <p><strong><span>&nbsp;</span></strong></p>#}
+{#                        <p><strong><span>&nbsp;</span></strong></p>#}
+{#                        <p><strong><a href="/marjan">فروشگاه مرجان:</a><a href="/marjan"><img alt="Marjan" height="240" src="/media/wysiwyg/aboutus/325X235/marjan.jpg" style="float: right;" title="Marjan" width="330" /></a></strong></p>#}
+{#                        <p>بازار مرجان کیش &ndash; غرفه ASP1 ۱۷۷۸ &ndash; فروشگاه دلونگی و فلر</p>#}
+{#                        <p><strong>سـاعـات بـازدیـد</strong><br />همه روزه صبح‌ها از ساعت ۱۰ تا ۱۳:۳۰ و بعدازظهرها از ساعت ۱۷:۳۰ تا ۲۲:۳۰ </p>#}
+{#                        <p><strong>شمـاره تماس:&nbsp;</strong></p>#}
+{#                        <p><strong><span>۴۴۴۶۶۳۳۸ &ndash; ۰۷۶</span></strong></p>#}
+{#                        <p><strong><span>&nbsp;</span></strong></p>#}
+{#                        <p><strong><span>&nbsp;</span></strong></p>#}
+{#                        <p><strong><a href="/markaz-tejari">فروشگاه مرکز تجاری:</a><a href="markaz-tejari"><img alt="Markaz-tejari" height="240" src="/media/wysiwyg/aboutus/325X235/markaz-tejari.jpg" style="float: right;" title="Markaz-tejari" width="330" /></a></strong></p>#}
+{#                        <p>مرکز تجاری کیش- طبقه همکف میدان اصلی &ndash; غرفه ۱۶۰ و ۱۶۱ &ndash; فروشگاه دلونگی و فلر</p>#}
+{#                        <p><strong>سـاعـات بـازدیـد</strong><br />همه روزه صبح‌ها از ساعت ۱۰ تا ۱۳:۳۰ و بعدازظهرها از ساعت ۱۷:۳۰ تا ۲۲:۳۰</p>#}
+{#                        <p><strong>شمـاره تماس:&nbsp;</strong></p>#}
+{#                        <p><strong><span>۴۴۴۵۲۶۷۳-۴ &ndash; ۰۷۶</span></strong></p></div> </div>#}
+            </div>
+        </div>
+    </div><!-- END page -->
+{% endblock %}

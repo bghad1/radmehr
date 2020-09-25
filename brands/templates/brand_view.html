@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<div class="container">
+{% block page_content %}
+<h1>برندها</h1>
+<div class="row">
+{% for thebrand in brand %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static thebrand.brand_logo %}">
+            <div class="card-body">
+                <h5 class="card-title">{{ thebrand.brand_name }}</h5>
+                <p class="card-text">{{ thebrand.brand_description }}</p>
+                <a href="{% url 'brand_detail' thebrand.pk %}" class="btn btn-primary">
+                    مشاهده بیشتر
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+</div>

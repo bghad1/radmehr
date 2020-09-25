@@ -1,0 +1,31 @@
+
+<div class="top-bread"><div class="breadcrumbs">
+    <ul>
+        <li class="home">
+            <a href="https://sanjehkish.com/" title="برو به صفحه‌ی خانگی">خانه</a>
+            &nbsp;<span>&raquo;</span>&nbsp;
+        </li>
+        <li class="brand">
+            <a href="https://sanjehkish.com/brand/" title="نام‌های تجاری">نام‌های تجاری</a>
+            &nbsp;<span>&raquo;</span>&nbsp;
+        </li>
+        <li class="view">
+            <strong>دلونگی</strong>
+        </li>
+    </ul>
+</div>
+</div>
+
+<div class="breadcrumbs">
+    <span class="step-links">
+        {% if page.has_previous %}
+            <a href="?page={{ page.previous_page_number }}">Previous</a>
+        {% endif %}
+    <span class="current">
+        Page {{ page.number }} of {{ page.paginator.num_pages }}.
+    </span>
+        {% if page.has_next %}
+            <a href="?page={{ page.next_page_number }}">Next</a>
+        {% endif %}
+    </span>
+</div>

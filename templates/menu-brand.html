@@ -1,0 +1,39 @@
+{% load static %}
+{% for thebrand in latest_brands_menu %}
+    <div class="col-category col-sm-3 col-md-3 col-xs-12">
+        <a class="form-group level1" href="{% url 'brands:brand_detail' thebrand.brand_name %}">
+            <img height="28" src="{{ thebrand.brand_logo.url }}" width="70" />
+            <span style="vertical-align: bottom;">&nbsp;{{ thebrand.brand_name }}</span></a>
+    </div>
+{% endfor %}
+
+{# First render the pages #}
+{#{% load static %}#}
+{#{% for themenu in latest_menus   %}#}
+{##}
+    {# Then check if current page is 'published' #}
+    {#{% if page.status == 'published' %}#}
+{##}
+{#    <li>#}
+{#        <a href="{{ themenu.slug }}">{{themenu.name}}</a>#}
+{#        <div class="col-category col-sm-3 col-md-3 col-xs-12">#}
+{#            <a class="form-group level1" href="#">#}
+{#                <img height="28" src="{% static 'sanjekish/media/wysiwyg/logo/Delonghi-png_1.png'%}" width="70" />#}
+{#                <span style="vertical-align: bottom;">&nbsp;{{ themenu.name }}</span></a>#}
+{#            <a class="form-group level2" href="brands/delonghi/.html">پخت و پز</a>#}
+{#            <a class="form-group level2" href="brands/delonghi/food-processor.html">غذاساز</a>#}
+{#            <a class="form-group level2" href="brands/delonghi/hot-beverage.html">نوشیدنی های گرم</a>#}
+{#            <a class="form-group level2" href="brands/delonghi/ironing-cleaning.html">نظافت و اتوکشی</a>#}
+{#            <a class="form-group level2" href="brands/delonghi/heating-cooling.html">حرارتی،برودتی و تصفیه</a>#}
+{#        </div>#}
+{#    </li>#}
+{##}
+    {#{% endif %}#}
+{#{% endfor %}#}
+{##}
+{#{% load static %}#}
+{#<ul>#}
+{#    {% for thepage in latest_pages %}#}
+{#        <li style="color: #a3a8a9; font-size: 12px;"><a href="{% url 'pages:page_detail' thepage.slug %}">{{ thepage.title }}</a></li>#}
+{#    {% endfor %}#}
+{#</ul>#}

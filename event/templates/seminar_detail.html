@@ -1,0 +1,39 @@
+{% extends 'base-sanje.html' %}
+{% load static %}
+
+<head>
+    <title>{% block title %}{{ seminars.title }}{% endblock %}</title>
+</head>
+<body class=" cms-page-view cms-about-us">
+{% block page_content  %}
+    <div class="page" id="page-container" >
+        <div class="top-bread"><div class="breadcrumbs">
+            <ul>
+                <li class="home">
+                    <a href="{% url 'homepage:home' %}" title="برو به صفحه‌ی خانگی">خانه</a>
+                    &nbsp;<span>&raquo;</span>&nbsp;
+                </li>
+                <li class="brand">
+                    <a href="{% url 'events:seminar_view' %}" title="سمینارها">سمینارها</a>
+                    &nbsp;<span>&raquo;</span>&nbsp;
+                </li>
+                <li class="cms_page">
+                    <strong>{{ seminars.title }}</strong>
+                </li>
+            </ul>
+        </div></div> <div class="page">
+        <div class="main-container col1-layout">
+            <div class="main">
+                <div class="col-main">
+                    <div class="std">
+                        <h1><strong>{{ seminars.title }}</strong>
+                            {#                            <img alt="{{ exhibitions.title }}" src="{{ exhibitions.head_img.url }}" title="{{ page_detail.title }}" />#}
+                        </h1>
+                        <h4 style="text-align: left;"><strong>تاریخ انتشار: {{ seminars.shamsidate }}</strong></h4><br/>
+{#                        <p style="text-align: left;"><strong>{{ seminars.shamsidate }}&nbsp;</strong></p>#}
+                        {#                        <p><img alt="LogoRadmehr" src="{% static 'img/logo/radmehr.png' %}" title="LogoRadmehr" /></p>#}
+                        <p>{{ seminars.body | safe }}</p>
+                    </div>
+                </div>
+            </div><!-- END page -->
+{% endblock %}

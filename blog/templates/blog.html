@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+    <title>{% block title %}Blog{% endblock %}</title>
+</head>
+{% block page_content %}
+     <div class="full_page_photo no_photo">
+          <div class="container">
+               <div class="hgroup">
+                    <div class="hgroup_title animated bounceInUp skincolored">
+                         <div class="container">
+                              <h1>وبلاگ</h1>
+                         </div>
+                    </div>
+                    <div class="hgroup_subtitle animated bounceInUp ">
+                         <div class="container">
+                              <p>مطالب خواندنی و مفید در وبلاگ بازرگانی رادمهر </p>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div class="main">
+          <div class="container triangles-of-section">
+               <div class="triangle-up-left"></div>
+               <div class="square-left"></div>
+               <div class="triangle-up-right"></div>
+               <div class="square-right"></div>
+          </div>
+          <section class="with_right_sidebar">
+               <div class="container">
+                    <div class="row">
+                         <div id="leftcol" class="col-sm-8 col-md-8">
+                             {% for post in posts %}
+                              <article class="post">
+                                   <div class="post_header">
+                                        <h2 class="post_title"><a href="{% url 'blog:blog_detail' post.slug%}">{{ post.title }}</a></h2>
+                                        <div class="post_sub"><i class="fa-time"></i>{{ post.created_on.date }} |&nbsp;
+                                                دسته بندی:&nbsp;
+                                            {% for category in post.categories.all %}
+                                                <a href="{% url 'blog:blog_category' category.name %}">{{ category.name }}</a>
+                                            {% endfor %}
+{#                                            <a href="single_post.html#post_comments"><i class="fa-comments-alt"></i> 6 نظر</a> #}
+                                        </div>
+                                   </div>
+                                   <div class="post_content">
+                                        <figure><a href="single_post.html"><img alt="0" src="{% static 'images/portfolio/p3.jpg' %}"></a></figure>
+                                       <p>{{ post.body | slice:"200" }}</p>
+                                        <a href="{% url 'blog:blog_detail' post.slug%}" class="btn btn-primary">بیشتر بخوانید</a> </div>
+                              </article>
+                             {% endfor %}
+
+                              <div class="pagination_wrapper">
+                                   <ul class="pagination pagination-centered">
+                                       {% include "pagination.html" with page=posts %}
+{#                                        <li class="disabled"><a href="#">»</a></li>#}
+{#                                        <li class="active"><a href="#">1</a></li>#}
+{#                                        <li><a href="#">2</a></li>#}
+{#                                        <li><a href="#">3</a></li>#}
+{#                                        <li><a href="#">4</a></li>#}
+{#                                        <li><a href="#">5</a></li>#}
+{#                                        <li><a href="#">«</a></li>#}
+                                   </ul>
+                              </div>
+                         </div>
+                         <div id="sidebar" class="col-sm-4 col-md-4">
+                              <aside class="widget">
+                                   <h4>ویجت متنی</h4>
+                                   <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و</p>
+                              </aside>
+                              <aside class="widget ads clearfix">
+                                   <h4>تبلیغات</h4>
+                                   <a href="#"><img src="http://placehold.it/110" alt=""></a> <a href="#"><img src="http://placehold.it/110" alt=""></a> <a href="#"><img src="http://placehold.it/110" alt=""></a> </aside>
+                              <aside class="widget">
+                                   <h4>تب ها</h4>
+                                   <ul class="nav nav-tabs" id="myTab">
+                                        <li class="active"><a data-toggle="tab" href="#recent">اخیر</a></li>
+                                        <li class=""><a data-toggle="tab" href="#tags">برچسب ها</a></li>
+                                   </ul>
+                                   <div class="tab-content" id="myTabContent">
+                                        <div id="recent" class="tab-pane fade active in">
+                                             <ul class="media-list">
+                                                  <li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/t5.jpg)"></a> <a href="#" class="media-date">19<span>مرداد</span></a>
+                                                       <h5 class="media-heading"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم...</a></h5>
+                                                       <p> حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت...</p>
+                                                  </li>
+                                                  <li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/t4.jpg)"></a> <a href="#" class="media-date">18<span>تیر</span></a>
+                                                       <h5 class="media-heading"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم...</a></h5>
+                                                       <p> حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت...</p>
+                                                  </li>
+                                                  <li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/b3.jpg)"></a> <a href="#" class="media-date">17<span>شهریور</span></a>
+                                                       <h5 class="media-heading"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم...</a></h5>
+                                                       <p> حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت...</p>
+                                                  </li>
+                                                  <li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/b4.jpg)"></a> <a href="#" class="media-date">16<span>خرداد</span></a>
+                                                      <h5 class="media-heading"><a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم...</a></h5>
+                                                       <p> حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت...</p>
+                                                  </li>
+                                             </ul>
+                                        </div>
+                                        <div id="tags" class="tab-pane fade"> <a class="label label-default">پیش فرض</a> <a class="label label-primary">اصلی</a> <a class="label label-success">موفق</a> <a class="label label-warning">اخطار</a> <a class="label label-danger">خطر</a> <a class="label label-info">اطلاعات</a> <a class="label label-default">پیش فرض</a> <a class="label label-success">موفق</a> <a class="label label-danger">خطر</a> <a class="label label-info">اطلاعات</a> <a class="label label-default">پیش فرض</a> <a class="label label-success">موفق</a> <a class="label label-success">موفق</a> <a class="label label-warning">اخطار</a> <a class="label label-danger">خطر</a> <a class="label label-warning">خطر</a> <a class="label label-warning">Warning</a> <a class="label label-danger">اخطار</a> <a class="label label-info">Info</a> <a class="label label-inverse">Inverse</a> </div>
+                                   </div>
+                              </aside>
+                         </div>
+                    </div>
+               </div>
+          </section>
+{% endblock %}
+</div>
+</body>
+</html>

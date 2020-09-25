@@ -1,0 +1,69 @@
+{% extends 'base-sanje.html' %}
+{% load static %}
+<head>
+    <title>{% block title %}سمینارها{% endblock %}</title>
+</head>
+{% block page_content  %}
+    <div class="page" id="page-container" >
+    <div class="top-bread">
+        <div class="breadcrumbs">
+            <ul>
+                <li class="home">
+                    <a href="{% url 'homepage:home' %}" title="برو به صفحه‌ی خانگی">خانه</a>
+                    &nbsp;<span>&raquo;</span>&nbsp;
+                </li>
+                <li class="socialvoice">
+                    <strong>سمینارها</strong>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="page">
+        <div class="main-container col1-layout">
+            <div class="main">
+                <div class="col-main">
+                    <div class="shopbybrand-list">
+                        <div class="brands">
+                            <ul class="col">
+                                {% for event in seminars %}
+                                    <li class="box">
+                                        <span>
+                                            <a href="{% url 'events:seminar_detail' event.slug %}">
+                                                <b>
+                                                    <h2>{{ event.title }}<br/></h2></a>
+                                                    <p>تاریخ رویداد:{{ event.shamsidate }}</p>
+                                                </b>
+{#                                                                                        <b>منتشر شده در:#}
+{#                                                {{ event.created_on.date }}{{ event.publish.date }}#}
+{#                                            </b>#}
+{#                                            <img src="{% static 'sanjekish/media/brands/thumbnail/1/125x/delonghi.png' %}"/>#}
+                                        </span>
+                                        {#                                            <span><img src="{{  thebrand.brand_logo.url }}"/></span>#}
+                                        <b>
+                                            {#                                            <h2>{{ event.title }}</h2>#}
+
+                                            <p>
+                                            <p style="text-align: justify;">{{ event.body | safe | slice:":400" }}</p>
+                                            </p>
+                                            <a class="button" href="{% url 'events:seminar_detail' event.slug %}">
+                                                <span>
+                                                    <span>ادامه مطلب</span>
+                                                </span>
+                                            </a>
+                                        </b>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                                        {% include "pagination.html" with page=posts %}
+                </div>
+            </div>
+        </div>
+    </div><!-- END page -->
+{% endblock %}
+
+
+
+
+

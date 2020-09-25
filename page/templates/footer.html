@@ -1,0 +1,7 @@
+{% load static %}
+<ul>
+    {% for thepage in latest_pages %}
+        <li style="color: #a3a8a9; font-size: 12px;"><a href="{{ thepage.get_absolute_url }}">{{ thepage.title }}</a></li>
+{#        <li style="color: #a3a8a9; font-size: 12px;"><a href="{% url 'pages:page_detail' thepage.slug %}">{{ thepage.title }}</a></li>#}
+    {% endfor %}
+</ul>

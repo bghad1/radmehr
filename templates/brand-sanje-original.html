@@ -1,0 +1,756 @@
+{% extends 'base-sanje.html' %}
+{% load static %}
+
+<head>
+    <title>{% block title %}شرکت بازرگانی رادمهر{% endblock %}</title>
+</head>
+<body class=" cms-index-index cms-home">
+{% block page_content %}
+    <div class="page home" id="page-container" >
+        <div class="page">
+            <div class="main-container col1-layout">
+                <div class="main">
+                    <div class="col-main">
+                        <script type="text/javascript">
+                            //<![CDATA[
+                            enUS = {"m":{"wide":["January","February","March","April","May","June","July","August","September","October","November","December"],"abbr":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]}}; // en_US locale reference
+                            Calendar._DN = ["\u06cc\u06a9\u0634\u0646\u0628\u0647","\u062f\u0648\u0634\u0646\u0628\u0647","\u0633\u0647\u200c\u0634\u0646\u0628\u0647","\u0686\u0647\u0627\u0631\u0634\u0646\u0628\u0647","\u067e\u0646\u062c\u0634\u0646\u0628\u0647","\u062c\u0645\u0639\u0647","\u0634\u0646\u0628\u0647"]; // full day names
+                            Calendar._SDN = ["\u06cc\u06a9\u0634\u0646\u0628\u0647","\u062f\u0648\u0634\u0646\u0628\u0647","\u0633\u0647\u200c\u0634\u0646\u0628\u0647","\u0686\u0647\u0627\u0631\u0634\u0646\u0628\u0647","\u067e\u0646\u062c\u0634\u0646\u0628\u0647","\u062c\u0645\u0639\u0647","\u0634\u0646\u0628\u0647"]; // short day names
+                            Calendar._FD = 6; // First day of the week. "0" means display Sunday first, "1" means display Monday first, etc.
+                            Calendar._MN = ["\u0698\u0627\u0646\u0648\u06cc\u0647\u0654","\u0641\u0648\u0631\u06cc\u0647\u0654","\u0645\u0627\u0631\u0633","\u0622\u0648\u0631\u06cc\u0644","\u0645\u0647\u0654","\u0698\u0648\u0626\u0646","\u0698\u0648\u0626\u06cc\u0647\u0654","\u0627\u0648\u062a","\u0633\u067e\u062a\u0627\u0645\u0628\u0631","\u0627\u06a9\u062a\u0628\u0631","\u0646\u0648\u0627\u0645\u0628\u0631","\u062f\u0633\u0627\u0645\u0628\u0631"]; // full month names
+                            Calendar._SMN = ["\u0698\u0627\u0646\u0648\u06cc\u0647\u0654","\u0641\u0648\u0631\u06cc\u0647\u0654","\u0645\u0627\u0631\u0633","\u0622\u0648\u0631\u06cc\u0644","\u0645\u0647\u0654","\u0698\u0648\u0626\u0646","\u0698\u0648\u0626\u06cc\u0647\u0654","\u0627\u0648\u062a","\u0633\u067e\u062a\u0627\u0645\u0628\u0631","\u0627\u06a9\u062a\u0628\u0631","\u0646\u0648\u0627\u0645\u0628\u0631","\u062f\u0633\u0627\u0645\u0628\u0631"]; // short month names
+                            Calendar._am = "\u0642\u0628\u0644\u200c\u0627\u0632\u0638\u0647\u0631"; // am/pm
+                            Calendar._pm = "\u0628\u0639\u062f\u0627\u0632\u0638\u0647\u0631";
+                            // tooltips
+                            Calendar._TT = {};
+                            Calendar._TT["INFO"] = 'درباره‌ی تقویم';
+                            Calendar._TT["ABOUT"] =
+                                'گزینش گر تاریخ/زمان DHTML\n' +
+                                "(c) dynarch.com 2002-2005 / Author: Mihai Bazon\n" +
+                                'برای بازدید آخرین نسخه: http://www.dynarch.com/projects/calendar/\n' +
+                                'توزیع شده تحت GNU LGPL. برای جزییات http://gnu.org/licenses/lgpl.html را ببینید.' +
+                                '\n\n' +
+                                'انتخاب تاریخ:\n' +
+                                '- برای انتخاب سال دکمه‌های \xab, \xbb را به کار ببرید\n' +
+                                '- برای انتخاب ماه دکمه‌های \u2039 را به کار ببرید\n' +
+                                '- برای انتخاب سریع‌تر کلیک موس را بر روی هر یک از دکمه‌های فوق نگه دارید.';
+                            Calendar._TT["ABOUT_TIME"] = '\n\n' +
+                                'انتخاب زمان:\n' +
+                                '- برای افزایش دادن هر یک از بخش‌های زمان بر روی آن کلیک کنید\n' +
+                                '- یا Shift-click کنید تا آن را کاهش دهید\n' +
+                                '- یا برای انتخاب سریع‌تر آن کلیک و درگ کنید.';
+                            Calendar._TT["PREV_YEAR"] = 'سال قبل (برای منو نگه دارید)';
+                            Calendar._TT["PREV_MONTH"] = 'ماه قبل (برای منو نگه دارید)';
+                            Calendar._TT["GO_TODAY"] = 'برو به امروز';
+                            Calendar._TT["NEXT_MONTH"] = 'ماه بعد (برای منو نگه دارید)';
+                            Calendar._TT["NEXT_YEAR"] = 'سال بعد (برای منو نگه دارید)';
+                            Calendar._TT["SEL_DATE"] = 'انتخاب تاریخ';
+                            Calendar._TT["DRAG_TO_MOVE"] = 'برای جابجایی بکشید';
+                            Calendar._TT["PART_TODAY"] = ' (' + "\u0627\u0645\u0631\u0648\u0632" + ')';
+                            // the following is to inform that "%s" is to be the first day of week
+                            Calendar._TT["DAY_FIRST"] = 'نمایش %s در ابتدا';
+                            // This may be locale-dependent. It specifies the week-end days, as an array
+                            // of comma-separated numbers. The numbers are from 0 to 6: 0 means Sunday, 1
+                            // means Monday, etc.
+                            Calendar._TT["WEEKEND"] = "5";
+                            Calendar._TT["CLOSE"] = 'بستن';
+                            Calendar._TT["TODAY"] = "\u0627\u0645\u0631\u0648\u0632";
+                            Calendar._TT["TIME_PART"] = 'برای تغییر مقدار (Shift-(Click یا درگ کنید';
+                            // date formats
+                            Calendar._TT["DEF_DATE_FORMAT"] = "%e %b %Y";
+                            Calendar._TT["TT_DATE_FORMAT"] = "%e %B %Y";
+                            Calendar._TT["WK"] = "\u0647\u0641\u062a\u0647";
+                            Calendar._TT["TIME"] = 'زمان:';
+                            //]]>
+                        </script>
+                        <div id="map-popup" class="map-popup" style="display:none;">
+                            <a href="#" class="map-popup-close" id="map-popup-close">x</a>
+                            <div class="map-popup-arrow"></div>
+                            <div class="map-popup-heading"><h2 id="map-popup-heading"></h2></div>
+                            <div class="map-popup-content" id="map-popup-content">
+                                <div class="map-popup-checkout">
+                                    <form action="#" method="POST" id="product_addtocart_form_from_popup">
+                                        <input type="hidden" name="product" class="product_id" value="" id="map-popup-product-id" />
+                                        <div class="additional-addtocart-box">
+                                        </div>
+                                        <button type="button" title="افزودن به سبد" class="button btn-cart" id="map-popup-button"><span><span>افزودن به سبد</span></span></button>
+                                    </form>
+                                </div>
+                                <div class="map-popup-msrp" id="map-popup-msrp-box"><strong>قیمت:</strong> <span style="text-decoration:line-through;" id="map-popup-msrp"></span></div>
+                                <div class="map-popup-price" id="map-popup-price-box"><strong>قیمت واقعی:</strong> <span id="map-popup-price"></span></div>
+                                <script type="text/javascript">
+                                    //<![CDATA[
+                                    document.observe("dom:loaded", Catalog.Map.bindProductForm);
+                                    //]]>
+                                </script>
+                            </div>
+                            <div class="map-popup-text" id="map-popup-text">Our price is lower than the manufacturer's &quot;minimum advertised price.&quot; As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.</div>
+                            <div class="map-popup-text" id="map-popup-text-what-this">Our price is lower than the manufacturer's &quot;minimum advertised price.&quot; As a result, we cannot show you the price in catalog or the product page. <br /><br /> You have no obligation to purchase the product once you know the price. You can simply remove the item from your cart.</div>
+                        </div>
+                        <div class="std"><p><meta content="779697366" name="enamad" /><meta content="IR-07" name="geo.region" /><meta content="Tehran" name="geo.placename" /><meta content="35.754941;51.448288" name="geo.position" /><meta content="35.754941, 51.448288" name="ICBM" /></p>
+                            <p><div class="promo-block clearfix">
+                                <div class="promo-box"><a class="image-link" href="cleaning-and-ironing/iron/steam-iron/gsi-280.html"><img alt="Tea Station" class="fade-image" src="{% static 'sanjekish/media/wysiwyg/Promotions/PromotionBlock-Fa/yakhsaran-banner1.jpg' %}" /></a></div>
+                                <div class="promo-box"><a class="image-link" href="hot-beverage/coffee-maker/fully-automatic-coffee-maker/ecam-44-660.html"><img alt="Fully Automatic Coffee Maker" class="fade-image" src="{% static 'sanjekish/media/wysiwyg/Promotions/PromotionBlock-Fa/ECAM-44.660.jpg' %}" /></a></div>
+                                <div class="promo-box"><a class="image-link" href="brands/migel/cooking/grc-860.html"><img alt="Rice Cooker" class="fade-image" src="{% static 'sanjekish/media/wysiwyg/Promotions/PromotionBlock-Fa/magic-banner1.jpg' %}" /></a></div>
+                            </div></p>
+                            <div class="module-box">
+                                <h2 class="line-netweb-top" style="width: 100%;
+text-align: center;
+border-bottom: 1px solid #c2a26f;
+line-height: 0.1em;
+margin: 10px 0 20px;">
+                                    <span style="font-size: 14px;color: #00A693;">منتخبی از محصولات جدید</span>
+                                </h2>
+                                <div class="box-heading module"></div>
+                                <div class="clear">&nbsp;</div>
+                                <p> <div class="newproducts more-module clearfix owl-carousel owl-theme">
+                                <div class="box-product-item">
+                                    <div class="view-first">
+                                        <div class="view-content">
+                                            <div class="image " >
+                                                <div id ="category-container-8389" class="onsale-category-container" onclick="document.location='gch-100.html'" style="width: 70px; height: 70px; background-image: url('{% static 'sanjekish/media/onsale/uploaded/NEW-70_44.png' %}');
+                                                        top: 0px; ">
+                                                    <div id="category-onsale-label-8389" class="custom-onsale-category-label-text onsale-category-label"><span></span></div>
+                                                </div>
+                                                <script type="text/javascript">
+                                                    new PeriodicalExecuter(function(pe8389) {
+                                                        if (typeof($('category-container-8389'))) {
+                                                            pe8389.stop();
+                                                        }
+                                                        onsaleinit('8389', 'right', 'top');
+                                                    }, 0.01);
+                                                    Event.observe(window, "resize", function(){
+                                                        onsaleinit('8389', 'right', 'top');
+                                                    });
+                                                </script>
+                                                <a href="gch-100.html">
+                                                    <img src="{% static 'sanjekish/media/catalog/product/cache/1/small_image/217x300/9df78eab33525d08d6e5fb8d27136e95/g/c/gch-100.w.jpg' %}" alt="خردکن GCH 100 میگل" />
+                                                </a>
+                                            </div>
+                                            <div class="name">
+                                                <a href="gch-100.html" title="خردکن GCH 100 میگل">خردکن GCH 100 میگل</a>
+                                            </div>
+                                            <div class="price clearfix">
+                                                <div class="price-box">
+<span class="regular-price" id="product-price-8389">
+<span class="price">‎۸۵۰٬۰۰۰ تومان</span> </span>
+                                                    <!-- majidian -->
+                                                </div>
+                                            </div>
+                                            <div class="box-product-buttons clearfix">
+                                                <a href="gch-100.html" class="buttons-cart">خرید کالا</a>
+                                                <a href="wishlist/index/add/product/8389/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-wish" title="افزودن به دلخواه"></a>
+                                                <a href="catalog/product_compare/add/product/8389/uenc/aHR0cHM6Ly9zYW5qZWhraXNoLmNvbS8%2c/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-compare" title="افزودن به مقایسه"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-product-item">
+                                    <div class="view-first">
+                                        <div class="view-content">
+                                            <div class="image " >
+                                                <div id ="category-container-6864" class="onsale-category-container" onclick="document.location='grc-860.html'" style="width: 70px; height: 70px; background-image: url('{% static 'sanjekish/media/onsale/uploaded/NEW-70_11.png' %}');
+                                                        top: 0px; ">
+                                                    <div id="category-onsale-label-6864" class="custom-onsale-category-label-text onsale-category-label"><span></span></div>
+                                                </div>
+                                                <script type="text/javascript">
+                                                    new PeriodicalExecuter(function(pe6864) {
+                                                        if (typeof($('category-container-6864'))) {
+                                                            pe6864.stop();
+                                                        }
+                                                        onsaleinit('6864', 'right', 'top');
+                                                    }, 0.01);
+                                                    Event.observe(window, "resize", function(){
+                                                        onsaleinit('6864', 'right', 'top');
+                                                    });
+                                                </script>
+                                                <a href="grc-860.html">
+                                                    <img src="{% static 'sanjekish/media/catalog/product/cache/1/small_image/217x300/9df78eab33525d08d6e5fb8d27136e95/g/r/grc-860-w_2.jpg' %}" alt="پلوپز GRC 860 میگل" />
+                                                </a>
+                                            </div>
+                                            <div class="name">
+                                                <a href="grc-860.html" title="پلوپز GRC 860 میگل">پلوپز GRC 860 میگل</a>
+                                            </div>
+                                            <div class="price clearfix">
+                                                <div class="price-box">
+<span class="regular-price" id="product-price-6864">
+<span class="price">‎۱٬۵۰۰٬۰۰۰ تومان</span> </span>
+                                                    <!-- majidian -->
+                                                </div>
+                                            </div>
+                                            <div class="box-product-buttons clearfix">
+                                                <a href="grc-860.html" class="buttons-cart">خرید کالا</a>
+                                                <a href="wishlist/index/add/product/6864/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-wish" title="افزودن به دلخواه"></a>
+                                                <a href="catalog/product_compare/add/product/6864/uenc/aHR0cHM6Ly9zYW5qZWhraXNoLmNvbS8%2c/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-compare" title="افزودن به مقایسه"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-product-item">
+                                    <div class="view-first">
+                                        <div class="view-content">
+                                            <div class="image " >
+                                                <div id ="category-container-8397" class="onsale-category-container" onclick="document.location='grc-850.html'" style="width: 70px; height: 70px; background-image: url('{% static 'sanjekish/media/onsale/uploaded/NEW-70_23.png' %}');
+                                                        top: 0px; ">
+                                                    <div id="category-onsale-label-8397" class="custom-onsale-category-label-text onsale-category-label"><span></span></div>
+                                                </div>
+                                                <script type="text/javascript">
+                                                    new PeriodicalExecuter(function(pe8397) {
+                                                        if (typeof($('category-container-8397'))) {
+                                                            pe8397.stop();
+                                                        }
+                                                        onsaleinit('8397', 'right', 'top');
+                                                    }, 0.01);
+                                                    Event.observe(window, "resize", function(){
+                                                        onsaleinit('8397', 'right', 'top');
+                                                    });
+                                                </script>
+                                                <a href="grc-850.html">
+                                                    <img src="{% static 'sanjekish/media/catalog/product/cache/1/small_image/217x300/9df78eab33525d08d6e5fb8d27136e95/g/r/grc-850-w.jpg' %}" alt="پلوپز GRC 850 میگل" />
+                                                </a>
+                                            </div>
+                                            <div class="name">
+                                                <a href="grc-850.html" title="پلوپز GRC 850 میگل">پلوپز GRC 850 میگل</a>
+                                            </div>
+                                            <div class="price clearfix">
+                                                <div class="price-box">
+<span class="regular-price" id="product-price-8397">
+<span class="price">‎۱٬۲۰۰٬۰۰۰ تومان</span> </span>
+                                                    <!-- majidian -->
+                                                </div>
+                                            </div>
+                                            <div class="box-product-buttons clearfix">
+                                                <a href="grc-850.html" class="buttons-cart">خرید کالا</a>
+                                                <a href="wishlist/index/add/product/8397/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-wish" title="افزودن به دلخواه"></a>
+                                                <a href="catalog/product_compare/add/product/8397/uenc/aHR0cHM6Ly9zYW5qZWhraXNoLmNvbS8%2c/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-compare" title="افزودن به مقایسه"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-product-item">
+                                    <div class="view-first">
+                                        <div class="view-content">
+                                            <div class="image " >
+                                                <div id ="category-container-6815" class="onsale-category-container" onclick="document.location='geg-200.html'" style="width: 70px; height: 70px; background-image: url('{% static 'sanjekish/media/onsale/uploaded/NEW-70_17.png' %}');
+                                                        top: 0px; ">
+                                                    <div id="category-onsale-label-6815" class="custom-onsale-category-label-text onsale-category-label"><span></span></div>
+                                                </div>
+                                                <script type="text/javascript">
+                                                    new PeriodicalExecuter(function(pe6815) {
+                                                        if (typeof($('category-container-6815'))) {
+                                                            pe6815.stop();
+                                                        }
+                                                        onsaleinit('6815', 'right', 'top');
+                                                    }, 0.01);
+                                                    Event.observe(window, "resize", function(){
+                                                        onsaleinit('6815', 'right', 'top');
+                                                    });
+                                                </script>
+                                                <a href="geg-200.html">
+                                                    <img src="{% static 'sanjekish/media/catalog/product/cache/1/small_image/217x300/9df78eab33525d08d6e5fb8d27136e95/g/e/geg-200..jpg' %}" alt="آسیاب برقی GEG 200 میگل" />
+                                                </a>
+                                            </div>
+                                            <div class="name">
+                                                <a href="geg-200.html" title="آسیاب برقی GEG 200 میگل">آسیاب برقی GEG 200 میگل</a>
+                                            </div>
+                                            <div class="price clearfix">
+                                                <div class="price-box">
+<span class="regular-price" id="product-price-6815">
+<span class="price">‎۴۹۰٬۰۰۰ تومان</span> </span>
+                                                    <!-- majidian -->
+                                                </div>
+                                            </div>
+                                            <div class="box-product-buttons clearfix">
+                                                <a href="geg-200.html" class="buttons-cart">خرید کالا</a>
+                                                <a href="wishlist/index/add/product/6815/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-wish" title="افزودن به دلخواه"></a>
+                                                <a href="catalog/product_compare/add/product/6815/uenc/aHR0cHM6Ly9zYW5qZWhraXNoLmNvbS8%2c/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-compare" title="افزودن به مقایسه"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-product-item">
+                                    <div class="view-first">
+                                        <div class="view-content">
+                                            <div class="image " >
+                                                <div id ="category-container-7991" class="onsale-category-container" onclick="document.location='gis-220.html'" style="width: 70px; height: 70px; background-image: url('{% static 'sanjekish/media/onsale/uploaded/NEW-70_12.png' %}');
+                                                        top: 0px; ">
+                                                    <div id="category-onsale-label-7991" class="custom-onsale-category-label-text onsale-category-label"><span></span></div>
+                                                </div>
+                                                <script type="text/javascript">
+                                                    new PeriodicalExecuter(function(pe7991) {
+                                                        if (typeof($('category-container-7991'))) {
+                                                            pe7991.stop();
+                                                        }
+                                                        onsaleinit('7991', 'right', 'top');
+                                                    }, 0.01);
+                                                    Event.observe(window, "resize", function(){
+                                                        onsaleinit('7991', 'right', 'top');
+                                                    });
+                                                </script>
+                                                <a href="gis-220.html">
+                                                    <img src="{% static 'sanjekish/media/catalog/product/cache/1/small_image/217x300/9df78eab33525d08d6e5fb8d27136e95/g/i/gis-220-ws.jpg' %}" alt="سامانه اتوکشی حرفه‌ای GIS 220 میگل" />
+                                                </a>
+                                            </div>
+                                            <div class="name">
+                                                <a href="gis-220.html" title="سامانه اتوکشی حرفه‌ای GIS 220 میگل">سامانه اتوکشی حرفه‌ای GIS 220 میگل</a>
+                                            </div>
+                                            <div class="price clearfix">
+                                                <div class="price-box">
+<span class="regular-price" id="product-price-7991">
+<span class="price">‎۱۵٬۰۰۰٬۰۰۰ تومان</span> </span>
+                                                    <!-- majidian -->
+                                                </div>
+                                            </div>
+                                            <div class="box-product-buttons clearfix">
+                                                <a href="gis-220.html" class="buttons-cart">خرید کالا</a>
+                                                <a href="wishlist/index/add/product/7991/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-wish" title="افزودن به دلخواه"></a>
+                                                <a href="catalog/product_compare/add/product/7991/uenc/aHR0cHM6Ly9zYW5qZWhraXNoLmNvbS8%2c/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-compare" title="افزودن به مقایسه"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-product-item">
+                                    <div class="view-first">
+                                        <div class="view-content">
+                                            <div class="image " >
+                                                <div id ="category-container-9047" class="onsale-category-container" onclick="document.location='gks-513.html'" style="width: 70px; height: 70px; background-image: url('{% static 'sanjekish/media/onsale/uploaded/NEW-70_36.png' %}');
+                                                        top: 0px; ">
+                                                    <div id="category-onsale-label-9047" class="custom-onsale-category-label-text onsale-category-label"><span></span></div>
+                                                </div>
+                                                <script type="text/javascript">
+                                                    new PeriodicalExecuter(function(pe9047) {
+                                                        if (typeof($('category-container-9047'))) {
+                                                            pe9047.stop();
+                                                        }
+                                                        onsaleinit('9047', 'right', 'top');
+                                                    }, 0.01);
+                                                    Event.observe(window, "resize", function(){
+                                                        onsaleinit('9047', 'right', 'top');
+                                                    });
+                                                </script>
+                                                <a href="gks-513.html">
+                                                    <img src="{% static 'sanjekish/media/catalog/product/cache/1/small_image/217x300/9df78eab33525d08d6e5fb8d27136e95/g/k/gks-509-w.jpg' %}" alt="ترازوی آشپزخانه GKS 509 میگل" />
+                                                </a>
+                                            </div>
+                                            <div class="name">
+                                                <a href="gks-513.html" title="ترازوی آشپزخانه GKS 509 میگل">ترازوی آشپزخانه GKS 509 میگل</a>
+                                            </div>
+                                            <div class="price clearfix">
+                                                <div class="price-box">
+<span class="regular-price" id="product-price-9047">
+<span class="price">‎۴۹۰٬۰۰۰ تومان</span> </span>
+                                                    <!-- majidian -->
+                                                </div>
+                                            </div>
+                                            <div class="box-product-buttons clearfix">
+                                                <a href="gks-513.html" class="buttons-cart">خرید کالا</a>
+                                                <a href="wishlist/index/add/product/9047/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-wish" title="افزودن به دلخواه"></a>
+                                                <a href="catalog/product_compare/add/product/9047/uenc/aHR0cHM6Ly9zYW5qZWhraXNoLmNvbS8%2c/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-compare" title="افزودن به مقایسه"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <script>
+                                    $j(document).ready(function(){
+                                        $j('.newproducts').owlCarousel({
+                                            rtl:true,
+                                            touchDrag:true,
+                                            navigation : true,
+                                            slideSpeed : 300,
+                                            paginationSpeed : 400,
+                                            stopOnHover: true,
+                                            responsive: true,
+                                            loop:true,
+                                            responsiveRefreshRate : 200,
+                                            responsiveBaseWidth: window,
+                                            items : 4, //10 items above 1000px browser width
+                                            itemsDesktop : [1000,4], //5 items between 1000px and 901px
+                                            itemsDesktopSmall : [900,3], // betweem 900px and 601px
+                                            itemsTablet: [600,2], //2 items between 600 and 0;
+                                            itemsMobile : [479,1] // itemsMobile disabled - inherit from itemsTab
+                                        });
+                                    });
+                                </script>
+                                </p>
+                            </div>
+                            <p><div class="shop-about clearfix ">
+                                <div class="shop-about-news col-sm-3">
+                                    <h2 class="line-netweb"><span style="font-size: 14px; color: #00a693;"> ارسال مرسولات</span></h2>
+                                    <img class="img-netweb" src="{% static 'sanjekish/media/wysiwyg/SliderTest/deliveryyy-36.jpg' %}" /></div>
+                                <div class="shop-about-text col-sm-3">
+                                    <h2 class="line-netweb"><span style="font-size: 14px; color: #00a693;"> درباره بازرگانی رادمهر</span></h2>
+                                    <div class="text text-netweb" style="background-color: #c2a26f;">
+                            <p align="justify" dir="rtl">بازرگانی رادمهر با عنایت به گسترش روزافزون بازارهای جهانی و با هدف تأمین نیازهای شهروندان در زمینه&zwnj;ی لوازم خانگی فعالیت خود را آغاز کرده است. بازرگانی رادمهر ،تکیه بر پشتوانه&zwnj;ای علمی، از آغاز فعالیت&zwnj;هایش همواره سه اصل مهم را در نظر داشته است.</p>
+                            <div><a class="more more-netweb" href="{% url 'pages:page_detail' 'about-us' %}">نمایش بیشتر</a></div>
+                        </div>
+                    </div>
+                    <div class="netweb-slider col-sm-3">
+                        <h2 class="line-netweb"><span style="font-size: 14px; color: #00a693;">رویدادهای اخیر </span></h2>
+                        <div class="shop-about-slider" style="margin-top: 50px !important;">
+                            <ul class="bxslider">{% static 'sanjekish/' %}
+                                <li><img alt="" src="{% static 'sanjekish/media/wysiwyg/SliderTest/kish-festival.jpg' %}" /></li>
+                                <li><a href="about-us.html"><img alt="" src="{% static 'sanjekish/media/wysiwyg/Promotions/khadamat.jpg' %}" /></a></li>
+                                <li><a href="brands/migel/scales/gks-507.html"><img alt="" src="{% static 'sanjekish/media/wysiwyg/SliderTest/kitchen-scale.jpg' %}" /></a></li>
+                                <li><a href="brands/migel/cleaning-and-ironing/gis-220.html"><img alt="" src="{% static 'sanjekish/media/wysiwyg/SliderTest/GIS220.jpg' %}" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <style><!--
+                .line-netweb{
+                    border-bottom: 1px solid #c2a26f;
+                }
+                --></style></p>
+                <div class="module-box">
+                    <h2 class="line-netweb-top" style="width: 100%;
+text-align: center;
+border-bottom: 1px solid #c2a26f;
+line-height: 0.1em;
+margin: 10px 0 20px;"><span style="font-size: 14px;color: #00A693;">پیشنهادات ویـــژه </span></h2>
+                    <div class="box-heading module"></div>
+                    <div class="clear">&nbsp;</div>
+                    <p>
+                    <div class="saleproducts more-module clearfix owl-carousel owl-theme">
+                        <div class="box-product-item">
+                            <div class="view-first">
+                                <div class="view-content">
+                                    <div class="image " >
+                                        <a href="--871/mhd-15.html">
+                                            <img alt="سشوار مسافرتی MHD 15 متئو" src="{% static 'sanjekish/media/catalog/product/cache/1/small_image/217x300/9df78eab33525d08d6e5fb8d27136e95/m/h/mhd-15-ws.._1.jpg' %}" alt="سشوار مسافرتی MHD 15 متئو" />
+                                        </a>
+                                    </div>
+                                    <div class="name">
+                                        <a href="--871/mhd-15.html" title="سشوار مسافرتی MHD 15 متئو">سشوار مسافرتی MHD 15 متئو</a>
+                                    </div>
+                                    <div class="price clearfix">
+                                        <div class="price-box">
+<span class="regular-price" id="product-price-2465">
+<span class="price">‎۲۹۰٬۰۰۰ تومان</span> </span>
+                                            <!-- majidian -->
+                                        </div>
+                                    </div>
+                                    <div class="box-product-buttons clearfix">
+                                        <a href="--871/mhd-15.html" class="buttons-cart">خرید کالا</a>
+                                        <a href="wishlist/index/add/product/2465/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-wish" title="افزودن به دلخواه"></a>
+                                        <a href="catalog/product_compare/add/product/2465/uenc/aHR0cHM6Ly9zYW5qZWhraXNoLmNvbS8%2c/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-compare" title="افزودن به مقایسه"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-product-item">
+                            <div class="view-first">
+                                <div class="view-content">
+                                    <div class="image " >
+                                        <div id ="category-container-7989" class="onsale-category-container" onclick="document.location='--871/gek-220.html'" style="width: 70px; height: 70px; background-image: url('{% static 'sanjekish/media/onsale/uploaded/NEW-70_29.png' %}');
+                                                top: 0px; ">
+                                            <div id="category-onsale-label-7989" class="custom-onsale-category-label-text onsale-category-label"><span></span></div>
+                                        </div>
+                                        <script type="text/javascript">
+                                            new PeriodicalExecuter(function(pe7989) {
+                                                if (typeof($('category-container-7989'))) {
+                                                    pe7989.stop();
+                                                }
+                                                onsaleinit('7989', 'right', 'top');
+                                            }, 0.01);
+                                            Event.observe(window, "resize", function(){
+                                                onsaleinit('7989', 'right', 'top');
+                                            });
+                                        </script>
+                                        <a href="--871/gek-220.html">
+                                            <img alt="کتری برقی GEK 220 میگل" src="{% static 'sanjekish/media/catalog/product/cache/1/small_image/217x300/9df78eab33525d08d6e5fb8d27136e95/g/e/gek-220.jpg' %}" alt="کتری برقی GEK 220 میگل" />
+                                        </a>
+                                    </div>
+                                    <div class="name">
+                                        <a href="--871/gek-220.html" title="کتری برقی GEK 220 میگل">کتری برقی GEK 220 میگل</a>
+                                    </div>
+                                    <div class="price clearfix">
+                                        <div class="price-box">
+<span class="regular-price" id="product-price-7989">
+<span class="price">‎۴۵۰٬۰۰۰ تومان</span> </span>
+                                            <!-- majidian -->
+                                        </div>
+                                    </div>
+                                    <div class="box-product-buttons clearfix">
+                                        <a href="--871/gek-220.html" class="buttons-cart">خرید کالا</a>
+                                        <a href="wishlist/index/add/product/7989/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-wish" title="افزودن به دلخواه"></a>
+                                        <a href="catalog/product_compare/add/product/7989/uenc/aHR0cHM6Ly9zYW5qZWhraXNoLmNvbS8%2c/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-compare" title="افزودن به مقایسه"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-product-item">
+                            <div class="view-first">
+                                <div class="view-content">
+                                    <div class="image " >
+                                        <div id ="category-container-8419" class="onsale-category-container" onclick="document.location='--871/gch-401.html'" style="width: 70px; height: 70px; background-image: url('{% static 'sanjekish/media/onsale/uploaded/NEW-70_42.png' %}');
+                                                top: 0px; ">
+                                            <div id="category-onsale-label-8419" class="custom-onsale-category-label-text onsale-category-label"><span></span></div>
+                                        </div>
+                                        <script type="text/javascript">
+                                            new PeriodicalExecuter(function(pe8419) {
+                                                if (typeof($('category-container-8419'))) {
+                                                    pe8419.stop();
+                                                }
+                                                onsaleinit('8419', 'right', 'top');
+                                            }, 0.01);
+                                            Event.observe(window, "resize", function(){
+                                                onsaleinit('8419', 'right', 'top');
+                                            });
+                                        </script>
+                                        <a href="--871/gch-401.html">
+                                            <img alt="خردکن GCH 401 میگل" src="{% static 'sanjekish/media/catalog/product/cache/1/small_image/217x300/9df78eab33525d08d6e5fb8d27136e95/g/c/gch-401-w.jpg' %}" alt="خردکن GCH 401 میگل" />
+                                        </a>
+                                    </div>
+                                    <div class="name">
+                                        <a href="--871/gch-401.html" title="خردکن GCH 401 میگل">خردکن GCH 401 میگل</a>
+                                    </div>
+                                    <div class="price clearfix">
+                                        ناموجود </div>
+                                    <div class="box-product-buttons clearfix">
+                                        <a href="--871/gch-401.html" class="buttons-cart">خرید کالا</a>
+                                        <a href="wishlist/index/add/product/8419/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-wish" title="افزودن به دلخواه"></a>
+                                        <a href="catalog/product_compare/add/product/8419/uenc/aHR0cHM6Ly9zYW5qZWhraXNoLmNvbS8%2c/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-compare" title="افزودن به مقایسه"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-product-item">
+                            <div class="view-first">
+                                <div class="view-content">
+                                    <div class="image " >
+                                        <a href="--871/hi-35.html">
+                                            <img alt="اتومو HI 35 فلر" src="{% static 'sanjekish/media/catalog/product/cache/1/small_image/217x300/9df78eab33525d08d6e5fb8d27136e95/h/i/hi-35.jpg' %}" alt="اتومو HI 35 فلر" />
+                                        </a>
+                                    </div>
+                                    <div class="name">
+                                        <a href="--871/hi-35.html" title="اتومو HI 35 فلر">اتومو HI 35 فلر</a>
+                                    </div>
+                                    <div class="price clearfix">
+                                        <div class="price-box">
+<span class="regular-price" id="product-price-2446">
+<span class="price">‎۶۵۰٬۰۰۰ تومان</span> </span>
+                                            <!-- majidian -->
+                                        </div>
+                                    </div>
+                                    <div class="box-product-buttons clearfix">
+                                        <a href="--871/hi-35.html" class="buttons-cart">خرید کالا</a>
+                                        <a href="wishlist/index/add/product/2446/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-wish" title="افزودن به دلخواه"></a>
+                                        <a href="catalog/product_compare/add/product/2446/uenc/aHR0cHM6Ly9zYW5qZWhraXNoLmNvbS8%2c/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-compare" title="افزودن به مقایسه"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-product-item">
+                            <div class="view-first">
+                                <div class="view-content">
+                                    <div class="image out-of-stock" >
+                                        <a href="--871/hd-2010.html">
+                                            <img alt="سشوار HD 2010 فلر" src="{% static 'sanjekish/media/catalog/product/cache/1/small_image/217x300/9df78eab33525d08d6e5fb8d27136e95/h/d/hd-2010_1_2.jpg' %}" alt="سشوار HD 2010 فلر" />
+                                        </a>
+                                    </div>
+                                    <div class="name">
+                                        <a href="--871/hd-2010.html" title="سشوار HD 2010 فلر">سشوار HD 2010 فلر</a>
+                                    </div>
+                                    <div class="price clearfix">
+                                        ناموجود </div>
+                                    <div class="box-product-buttons clearfix">
+                                        <a href="--871/hd-2010.html" class="buttons-cart">خرید کالا</a>
+                                        <a href="wishlist/index/add/product/2434/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-wish" title="افزودن به دلخواه"></a>
+                                        <a href="catalog/product_compare/add/product/2434/uenc/aHR0cHM6Ly9zYW5qZWhraXNoLmNvbS8%2c/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-compare" title="افزودن به مقایسه"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-product-item">
+                            <div class="view-first">
+                                <div class="view-content">
+                                    <div class="image " >
+                                        <div id ="category-container-6725" class="onsale-category-container" onclick="document.location='--871/gcs-160.html'" style="width: 70px; height: 70px; background-image: url('{% static 'sanjekish/media/onsale/uploaded/NEW-70_13.png' %}');
+                                                top: 0px; ">
+                                            <div id="category-onsale-label-6725" class="custom-onsale-category-label-text onsale-category-label"><span></span></div>
+                                        </div>
+                                        <script type="text/javascript">
+                                            new PeriodicalExecuter(function(pe6725) {
+                                                if (typeof($('category-container-6725'))) {
+                                                    pe6725.stop();
+                                                }
+                                                onsaleinit('6725', 'right', 'top');
+                                            }, 0.01);
+                                            Event.observe(window, "resize", function(){
+                                                onsaleinit('6725', 'right', 'top');
+                                            });
+                                        </script>
+                                        <a href="--871/gcs-160.html">
+                                            <img alt="آب مرکبات گیری GCS 160 میگل" src="{% static 'sanjekish/media/catalog/product/cache/1/small_image/217x300/9df78eab33525d08d6e5fb8d27136e95/g/c/gcs-160.jpg' %}" alt="آب مرکبات گیری GCS 160 میگل" />
+                                        </a>
+                                    </div>
+                                    <div class="name">
+                                        <a href="--871/gcs-160.html" title="آب مرکبات گیری GCS 160 میگل">آب مرکبات گیری GCS 160 میگل</a>
+                                    </div>
+                                    <div class="price clearfix">
+                                        <div class="price-box">
+<span class="regular-price" id="product-price-6725">
+<span class="price">‎۸۵۰٬۰۰۰ تومان</span> </span>
+                                            <!-- majidian -->
+                                        </div>
+                                    </div>
+                                    <div class="box-product-buttons clearfix">
+                                        <a href="--871/gcs-160.html" class="buttons-cart">خرید کالا</a>
+                                        <a href="wishlist/index/add/product/6725/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-wish" title="افزودن به دلخواه"></a>
+                                        <a href="catalog/product_compare/add/product/6725/uenc/aHR0cHM6Ly9zYW5qZWhraXNoLmNvbS8%2c/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-compare" title="افزودن به مقایسه"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-product-item">
+                            <div class="view-first">
+                                <div class="view-content">
+                                    <div class="image " >
+                                        <div id ="category-container-8004" class="onsale-category-container" onclick="document.location='--871/gfp-700.html'" style="width: 70px; height: 70px; background-image: url('{% static 'sanjekish/media/onsale/uploaded/NEW-70_45.png' %}');
+                                                top: 0px; ">
+                                            <div id="category-onsale-label-8004" class="custom-onsale-category-label-text onsale-category-label"><span></span></div>
+                                        </div>
+                                        <script type="text/javascript">
+                                            new PeriodicalExecuter(function(pe8004) {
+                                                if (typeof($('category-container-8004'))) {
+                                                    pe8004.stop();
+                                                }
+                                                onsaleinit('8004', 'right', 'top');
+                                            }, 0.01);
+                                            Event.observe(window, "resize", function(){
+                                                onsaleinit('8004', 'right', 'top');
+                                            });
+                                        </script>
+                                        <a href="--871/gfp-700.html">
+                                            <img alt="غذاساز GFP 700 میگل" src="{% static 'sanjekish/media/catalog/product/cache/1/small_image/217x300/9df78eab33525d08d6e5fb8d27136e95/g/f/gfp-700-w.jpg' %}" alt="غذاساز GFP 700 میگل" />
+                                        </a>
+                                    </div>
+                                    <div class="name">
+                                        <a href="--871/gfp-700.html" title="غذاساز GFP 700 میگل">غذاساز GFP 700 میگل</a>
+                                    </div>
+                                    <div class="price clearfix">
+                                        ناموجود </div>
+                                    <div class="box-product-buttons clearfix">
+                                        <a href="--871/gfp-700.html" class="buttons-cart">خرید کالا</a>
+                                        <a href="wishlist/index/add/product/8004/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-wish" title="افزودن به دلخواه"></a>
+                                        <a href="catalog/product_compare/add/product/8004/uenc/aHR0cHM6Ly9zYW5qZWhraXNoLmNvbS8%2c/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-compare" title="افزودن به مقایسه"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-product-item">
+                            <div class="view-first">
+                                <div class="view-content">
+                                    <div class="image out-of-stock" >
+                                        <a href="--871/gts-286.html">
+                                            <img alt="چای‌ساز ایستاده GTS 112 میگل" src="{% static 'sanjekish/media/catalog/product/cache/1/small_image/217x300/9df78eab33525d08d6e5fb8d27136e95/g/t/gts-112....jpg' %}" alt="چای‌ساز ایستاده GTS 112 میگل" />
+                                        </a>
+                                    </div>
+                                    <div class="name">
+                                        <a href="--871/gts-286.html" title="چای‌ساز ایستاده GTS 112 میگل">چای‌ساز ایستاده GTS 112 میگل</a>
+                                    </div>
+                                    <div class="price clearfix">
+                                        ناموجود </div>
+                                    <div class="box-product-buttons clearfix">
+                                        <a href="--871/gts-286.html" class="buttons-cart">خرید کالا</a>
+                                        <a href="wishlist/index/add/product/9273/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-wish" title="افزودن به دلخواه"></a>
+                                        <a href="catalog/product_compare/add/product/9273/uenc/aHR0cHM6Ly9zYW5qZWhraXNoLmNvbS8%2c/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-compare" title="افزودن به مقایسه"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-product-item">
+                            <div class="view-first">
+                                <div class="view-content">
+                                    <div class="image out-of-stock" >
+                                        <a href="--871/gpj-800.html">
+                                            <img alt="آب میوه گیری GPJ 800 میگل" src="{% static 'sanjekish/media/catalog/product/cache/1/small_image/217x300/9df78eab33525d08d6e5fb8d27136e95/g/p/gpj-800.jpg' %}" alt="آب میوه گیری GPJ 800 میگل" />
+                                        </a>
+                                    </div>
+                                    <div class="name">
+                                        <a href="--871/gpj-800.html" title="آب میوه گیری GPJ 800 میگل">آب میوه گیری GPJ 800 میگل</a>
+                                    </div>
+                                    <div class="price clearfix">
+                                        ناموجود </div>
+                                    <div class="box-product-buttons clearfix">
+                                        <a href="--871/gpj-800.html" class="buttons-cart">خرید کالا</a>
+                                        <a href="wishlist/index/add/product/8559/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-wish" title="افزودن به دلخواه"></a>
+                                        <a href="catalog/product_compare/add/product/8559/uenc/aHR0cHM6Ly9zYW5qZWhraXNoLmNvbS8%2c/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-compare" title="افزودن به مقایسه"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-product-item">
+                            <div class="view-first">
+                                <div class="view-content">
+                                    <div class="image " >
+                                        <div id ="category-container-8581" class="onsale-category-container" onclick="document.location='--871/gpj-800-8581.html'" style="width: 70px; height: 70px; background-image: url('{% static 'sanjekish/media/onsale/uploaded/NEW-70_28.png' %}');
+                                                top: 0px; ">
+                                            <div id="category-onsale-label-8581" class="custom-onsale-category-label-text onsale-category-label"><span></span></div>
+                                        </div>
+                                        <script type="text/javascript">
+                                            new PeriodicalExecuter(function(pe8581) {
+                                                if (typeof($('category-container-8581'))) {
+                                                    pe8581.stop();
+                                                }
+                                                onsaleinit('8581', 'right', 'top');
+                                            }, 0.01);
+                                            Event.observe(window, "resize", function(){
+                                                onsaleinit('8581', 'right', 'top');
+                                            });
+                                        </script>
+                                        <a href="--871/gpj-800-8581.html">
+                                            <img alt="آب میوه گیری GPJ 802 میگل" src="{% static 'sanjekish/media/catalog/product/cache/1/small_image/217x300/9df78eab33525d08d6e5fb8d27136e95/g/p/gpj-802_1.jpg' %}" alt="آب میوه گیری GPJ 802 میگل" />
+                                        </a>
+                                    </div>
+                                    <div class="name">
+                                        <a href="--871/gpj-800-8581.html" title="آب میوه گیری GPJ 802 میگل">آب میوه گیری GPJ 802 میگل</a>
+                                    </div>
+                                    <div class="price clearfix">
+                                        ناموجود </div>
+                                    <div class="box-product-buttons clearfix">
+                                        <a href="--871/gpj-800-8581.html" class="buttons-cart">خرید کالا</a>
+                                        <a href="wishlist/index/add/product/8581/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-wish" title="افزودن به دلخواه"></a>
+                                        <a href="catalog/product_compare/add/product/8581/uenc/aHR0cHM6Ly9zYW5qZWhraXNoLmNvbS8%2c/form_key/feCcNC50xF0DFDs4/index.html" class="buttons-compare" title="افزودن به مقایسه"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        $j(document).ready(function(){
+                            $j('.saleproducts').owlCarousel({
+                                rtl:true,
+                                touchDrag:true,
+                                navigation : true,
+                                slideSpeed : 300,
+                                paginationSpeed : 400,
+                                stopOnHover: true,
+                                responsive: true,
+                                responsiveRefreshRate : 200,
+                                responsiveBaseWidth: window,
+                                items : 4, //10 items above 1000px browser width
+                                itemsDesktop : [1000,4], //5 items between 1000px and 901px
+                                itemsDesktopSmall : [900,3], // betweem 900px and 601px
+                                itemsTablet: [600,2], //2 items between 600 and 0;
+                                itemsMobile : [479,1] // itemsMobile disabled - inherit from itemsTab
+                            });
+                        });
+                    </script>
+                    </p>
+                </div>
+                <p><p></p>
+                <p class="shop-newsletter clearfix" dir="rtl" style="text-align: justify;"><span style="font-size: large;">&nbsp; &nbsp;&nbsp;<img height="28" src="data:image/gif;base64,R0lGODlhPAA8ANU/AOHKsfv49MeecObVwfr28+zf0PPq4f79/NKwjPbw6eDIr+XRu9/HrefWw/bv6NKxjfXu5/z7+da4l97EqfTs5Nm9nvv59uTPuuPOt8yle/j07/fy7Pjz7fn18e/k19Cth9i6murcy9W2lcmhdtGvi/Lo3ujYxu/j1t7Fqu3g0erbyvDl2dS0kv38++fUwPTs4+7j1enaydS0kdq/odu/ovLp3+7i1d7GrNq+n+rby+nZyMacbujXxdKwi93EqP///yH/C05FVFNDQVBFMi4wAwEAAAAh/wtYTVAgRGF0YVhNUDw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RkIzOEQ1MDNBRjI0MTFFOUEwQTI5Rjg5RTAyMDhGRDEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RkIzOEQ1MDRBRjI0MTFFOUEwQTI5Rjg5RTAyMDhGRDEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGQjM4RDUwMUFGMjQxMUU5QTBBMjlGODlFMDIwOEZEMSIg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" style="vertical-align: middle;" width="28" />&nbsp;&nbsp;&nbsp; <span style="font-size: medium; color: #000000;">برای اطلاع از آخرین اخبار ، ویدیوهای آموزشی ، اطلاعات کالاها و مسابقات</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="https://www.instagram.com/radmehrco/" target="_self"><img height="60" src="{% static 'sanjekish/media/wysiwyg/instagram.png' %}" style="vertical-align: middle;" width="60" /></a>&nbsp;&nbsp;<a href="http://www.aparat.com/radmehrco" target="_self"><img height="60" src="{% static 'sanjekish/media/wysiwyg/aparat.png' %}" style="vertical-align: middle;" width="60" /></a> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span> <!--End mc_embed_signup--></p></p>
+                <div class="atd-offers" style="background-color: #fff;">
+                    <p>گـارانـتـی مـعـتـبـر</p>
+                    <p>نـمـایـنـدگی رسـمـی</p>
+                    <p>بـازگـشـت ۷ روزه</p>
+                    <p>خـدمـات پـسـتـی</p>
+                </div></div> </div>
+    </div>
+    </div>
+    </div><!-- END page -->
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,1543 @@
+﻿{% load page_tags %}
+{% load brand_tags %}
+{% load menu_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <script type="text/javascript">var slide_on=false;</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="شرکت بازرگانی رادمهر" />
+    <meta name="robots" content="INDEX,FOLLOW" />
+    <link rel="icon" href="{% static 'sanjekish/media/favicon/default/Favicon-2.jpg' %}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'sanjekish/media/favicon/default/Favicon-2.jpg' %}" type="image/x-icon" />
+    <!--[if lt IE 7]>
+    <script type="text/javascript">
+        //<![CDATA[
+var BLANK_URL = 'https://sanjehkish.com/js/blank.html';
+var BLANK_IMG = 'https://sanjehkish.com/js/spacer.gif';
+//]]>
+</script>
+<![endif]-->
+    <script type="text/javascript">
+        var BASE_URL = '{% url 'homepage:home' %}';
+        var clearenceUrl = 'blog/index.html';
+    </script>
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/media/css_secure/c326880ff464ac958bd594e1720701b4.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/media/css_secure/c3abf7e26d5f92768f86cf5a327c054b.css' %}" media="all" />
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/media/css_secure/52a6312d205350962be7d33401311e05.css' %}" media="print" />
+    <script type="text/javascript" src="{% static 'sanjekish/js/jquery/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/jquery/jquery.mswitch.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/lib/jquery/noconflict.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/prototype/prototype.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/lib/ccard.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/prototype/validation.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/scriptaculous/builder.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/scriptaculous/effects.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/scriptaculous/dragdrop.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/scriptaculous/controls.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/scriptaculous/slider.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/varien/js.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/varien/form.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/varien/script.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/varien/menu.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/mage/translate.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/mage/cookies.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/jquery/func.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/aw_onsale/onsale.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/mageworx/modalbox-fa.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/mageworx/icart.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/varien/product.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/calendar/calendar.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/calendar/calendar-setup.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/mirasvit/core/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/mirasvit/core/underscore.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/mirasvit/core/backbone.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/mirasvit/code/searchautocomplete/form.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/mirasvit/code/searchautocomplete/autocomplete.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/sariina/currencymanagerfa/sariina_currencymanagerfa_round.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/sariina/shamsi/calendar/jalali.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/sariina/shamsi/fix-validation.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/easing/jquery.easing.1.3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/slideshow/efects.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/owl-carousel/owl.carousel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/skin/frontend/base/default/js/bundle.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/skin/frontend/base/default/js/msrp.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/skin/frontend/default/atd/js/lib/modernizr.custom.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/skin/frontend/default/atd/js/lib/selectivizr.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/skin/frontend/default/atd/js/lib/matchMedia.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/skin/frontend/default/atd/js/lib/matchMedia.addListener.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/skin/frontend/default/atd/js/lib/enquire.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/skin/frontend/default/atd/js/app.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/skin/frontend/default/atd/js/lib/jquery.cycle2.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/skin/frontend/default/atd/js/lib/jquery.cycle2.swipe.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/skin/frontend/default/atd/js/slideshow.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/skin/frontend/default/atd/js/lib/imagesloaded.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/skin/frontend/default/atd/js/minicart.js' %}"></script>
+    <!--<link href="rss/catalog/new/store_id/1/index.html" title="محصولات جدید" rel="alternate" type="application/rss+xml" /> -->
+    <!--<link href="rss/catalog/special/store_id/1/cid/0/index.html" title="محصولات ویژه" rel="alternate" type="application/rss+xml" />-->
+    <!--<link href="rss/catalog/salesrule/store_id/1/cid/0/index.html" title="کوپن‌ها/تخفیف‌ها" rel="alternate" type="application/rss+xml" />-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/media/css_secure/09cdb6f16f28b8ee9ff532ba00fe6939.css' %}" media="all" />
+    <![endif]-->
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="{% static 'sanjekish/js/lib/ds-sleight.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/skin/frontend/base/default/js/ie6.js' %}"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/media/css_secure/99170af4eeb58e0186c675f40dc9c6c8.css' %}" media="all" />
+    <![endif]-->
+    <script type="text/javascript">
+        //<![CDATA[
+        optionalZipCountries = ["IR"];
+        //]]>
+    </script>
+
+    <script type="text/javascript">
+        sariinaCurrencyManagerFaJsConfig ={"precision":0,"position":16,"display":2,"symbol":" \u062a\u0648\u0645\u0627\u0646","zerotext":"","excludecheckout":"1","cutzerodecimal":0,"cutzerodecimal_suffix":",-","min_decimal_count":"0"};
+        try {
+            extendProductConfigformatPrice();
+        } catch (e) {
+        }
+    </script><script type="text/javascript">//<![CDATA[
+var Translator = new Translate({"HTML tags are not allowed":"\u062a\u06af \u0647\u0627\u06cc HTML \u0645\u062c\u0627\u0632 \u0646\u06cc\u0633\u062a","Please select an option.":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u06af\u0632\u06cc\u0646\u0647 \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u0646\u0645\u0627\u06cc\u06cc\u062f.","This is a required field.":"\u0627\u06cc\u0646 \u06cc\u06a9 \u0641\u06cc\u0644\u062f \u0627\u0644\u0632\u0627\u0645\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f.","Please enter a valid number in this field.":"\u0644\u0637\u0641\u0627 \u062f\u0631 \u0627\u06cc\u0646 \u0641\u06cc\u0644\u062f \u06cc\u06a9 \u0634\u0645\u0627\u0631\u0647\u200c\u06cc \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f.","The value is not within the specified range.":"\u0645\u0642\u062f\u0627\u0631 \u062f\u0631 \u0645\u062d\u062f\u0648\u062f\u0647 \u0645\u0634\u062e\u0635 \u0646\u06cc\u0633\u062a.","Please use letters only (a-z or A-Z) in this field.":"\u0644\u0637\u0641\u0627 \u062f\u0631 \u0627\u06cc\u0646 \u0641\u06cc\u0644\u062f \u062a\u0646\u0647\u0627 \u0627\u0632 \u062d\u0631\u0648\u0641 (a-z \u06cc\u0627 A-Z) \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0646\u0645\u0627\u06cc\u06cc\u062f.","Please use only letters (a-z or A-Z) or numbers (0-9) only in this field. No spaces or other characters are allowed.":"\u0644\u0637\u0641\u0627 \u062a\u0646\u0647\u0627 \u062f\u0631 \u0627\u06cc\u0646 \u0641\u06cc\u0644\u062f \u0641\u0642\u0637 \u062d\u0631\u0648\u0641 (a-z) \u06cc\u0627 \u0627\u0639\u062f\u0627\u062f (9-0) \u0631\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0646\u0645\u0627\u06cc\u06cc\u062f. \u0641\u0627\u0635\u0644\u0647 \u06cc\u0627 \u0647\u06cc\u0686 \u06a9\u0627\u0631\u0627\u06a9\u062a\u0631 \u062f\u06cc\u06af\u0631\u06cc \u0645\u062c\u0627\u0632 \u0646\u06cc\u0633\u062a\u0646\u062f.","Please use only letters (a-z or A-Z) or numbers (0-9) or spaces and # only in this field.":"\u0644\u0637\u0641\u0627 \u062a\u0646\u0647\u0627 \u062f\u0631 \u0627\u06cc\u0646 \u0641\u06cc\u0644\u062f \u0641\u0642\u0637 \u0627\u0632 \u062d\u0631\u0648\u0641 (a-z) \u06cc\u0627 \u0627\u0639\u062f\u0627\u062f (9-0) \u06cc\u0627 \u0641\u0627\u0635\u0644\u0647 \u0648 # \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0646\u0645\u0627\u06cc\u06cc\u062f.","Please enter a valid phone number. For example (123) 456-7890 or 123-456-7890.":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0634\u0645\u0627\u0631\u0647 \u062a\u0644\u0641\u0646 \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f. \u0628\u0631\u0627\u06cc \u0645\u062b\u0627\u0644 7890-456 (123) \u06cc\u0627 7890-456-123.","Please enter a valid fax number. For example (123) 456-7890 or 123-456-7890.":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0634\u0645\u0627\u0631\u0647 \u0641\u06a9\u0633 \u0645\u0639\u062a\u0628\u0631 \u0631\u0627 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f. \u0645\u062b\u0644\u0627(123) 456-7890 or 123-456-7890.","Please enter a valid date.":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u062a\u0627\u0631\u06cc\u062e \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f.","The From Date value should be less than or equal to the To Date value.":"\u062a\u0627\u0631\u06cc\u062e \u0634\u0631\u0648\u0639 \u0628\u0627\u06cc\u062f \u06a9\u0648\u0686\u06a9\u062a\u0631 \u06cc\u0627 \u0645\u0633\u0627\u0648\u06cc \u062a\u0627\u0631\u06cc\u062e \u067e\u0627\u06cc\u0627\u0646 \u0628\u0627\u0634\u062f.","Please enter a valid email address. For example johndoe@domain.com.":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0622\u062f\u0631\u0633 \u0627\u06cc\u0645\u06cc\u0644 \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f. \u0628\u0631\u0627\u06cc \u0645\u062b\u0627\u0644 name@domain.com.","Please use only visible characters and spaces.":"\u0641\u0642\u0637 \u0627\u0632 \u0641\u0627\u0635\u0644\u0647 \u0648 \u06a9\u0627\u0631\u0627\u06a9\u062a\u0631\u0647\u0627\u06cc \u0642\u0627\u0628\u0644 \u0645\u0634\u0627\u0647\u062f\u0647 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u06a9\u0646\u06cc\u062f.","Please enter 6 or more characters without leading or trailing spaces.":"\u0644\u0637\u0641\u0627 \u06f6 \u06a9\u0627\u0631\u0627\u06a9\u062a\u0631 \u06cc\u0627 \u0628\u06cc\u0634\u062a\u0631 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f. \u0641\u0627\u0635\u0644\u0647\u200c\u0647\u0627\u06cc \u0627\u0628\u062a\u062f\u0627\u06cc\u06cc \u06cc\u0627 \u0627\u0646\u062a\u0647\u0627\u06cc\u06cc \u0646\u0627\u062f\u06cc\u062f\u0647 \u06af\u0631\u0641\u062a\u0647 \u062e\u0648\u0627\u0647\u0646\u062f \u0634\u062f.","Please enter 7 or more characters. Password should contain both numeric and alphabetic characters.":"\u0644\u0637\u0641\u0627 \u06f7 \u06a9\u0627\u0631\u0627\u06a9\u062a\u0631 \u06cc\u0627 \u0628\u06cc\u0634\u062a\u0631 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f. \u06a9\u0644\u0645\u0647 \u0639\u0628\u0648\u0631 \u0628\u0627\u06cc\u062f \u0634\u0627\u0645\u0644 \u062d\u0631\u0648\u0641 \u0648 \u0627\u0631\u0642\u0627\u0645 \u0628\u0627\u0634\u062f.","Please make sure your passwords match.":"\u0644\u0637\u0641\u0627 \u0627\u0637\u0645\u06cc\u0646\u0627\u0646 \u062d\u0627\u0635\u0644 \u0646\u0645\u0627\u06cc\u06cc\u062f \u06a9\u0647 \u06af\u0630\u0631\u0648\u0627\u0698\u0647\u200c\u0647\u0627\u06cc\u200c\u062a\u0627\u0646 \u062a\u0637\u0627\u0628\u0642 \u062f\u0627\u0631\u0646\u062f.","Please enter a valid URL. For example http:\/\/www.example.com or www.example.com":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 URL \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f. \u0628\u0631\u0627\u06cc \u0645\u062b\u0627\u0644 http:\/\/www.example.com \u06cc\u0627 www.example.com","Please enter a valid URL Key. For example \"example-page\", \"example-page.html\" or \"anotherlevel\/example-page\".":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u06a9\u0644\u06cc\u062f URL \u0645\u0639\u062a\u0628\u0631 \u0631\u0627 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f. \u0645\u062b\u0644\u0627 \"example-page\", \"example-page.html\" \u064a\u0627 \"anotherlevel\/example-page\".","Please enter a valid social security number. For example 123-45-6789.":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0634\u0645\u0627\u0631\u0647\u200c\u06cc \u062a\u0627\u0645\u06cc\u0646 \u0627\u062c\u062a\u0645\u0627\u0639\u06cc \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f. \u0628\u0631\u0627\u06cc \u0645\u062b\u0627\u0644 6789-45-123.","Please enter a valid zip code. For example 90602 or 90602-1234.":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u06a9\u062f \u067e\u0633\u062a\u06cc \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f. \u0628\u0631\u0627\u06cc \u0645\u062b\u0627\u0644 90602 \u06cc\u0627 12345-90602.","Please enter a valid zip code.":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u06a9\u062f \u067e\u0633\u062a\u06cc \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f.","Please use this date format: dd\/mm\/yyyy. For example 17\/03\/2006 for the 17th of March, 2006.":"\u0644\u0637\u0641\u0627 \u0627\u06cc\u0646 \u0633\u0627\u062e\u062a\u0627\u0631 \u062a\u0627\u0631\u06cc\u062e \u0631\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0646\u0645\u0627\u06cc\u06cc\u062f: \u0633\u0627\u0644\/\u0645\u0627\u0647\/\u0631\u0648\u0632. \u0628\u0631\u0627\u06cc \u0645\u062b\u0627\u0644 2010\/03\/17 \u0628\u0631\u0627\u06cc \u0647\u0641\u062f\u0647 \u0627\u0645 \u0645\u0627\u0631\u0686 2010.","Please enter a valid $ amount. For example $100.00.":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0645\u0628\u0644\u063a \u0645\u0639\u062a\u0628\u0631 \u0631\u06cc\u0640\u0627\u0644 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f. \u0628\u0631\u0627\u06cc \u0645\u062b\u0627\u0644 \u06f1\u06f0\u06f0\u06f0\u06f0\u06f0 \u0631\u06cc\u0640\u0627\u0644.","Please select one of the above options.":"\u0644\u0637\u0641\u0627 \u06cc\u06a9\u06cc \u0627\u0632 \u06af\u0632\u06cc\u0646\u0647\u200c\u0647\u0627\u06cc \u0628\u0627\u0644\u0627 \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u0646\u0645\u0627\u06cc\u06cc\u062f.","Please select one of the options.":"\u0644\u0637\u0641\u0627 \u06cc\u06a9\u06cc \u0627\u0632 \u06af\u0632\u06cc\u0646\u0647\u200c\u0647\u0627 \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u0646\u0645\u0627\u06cc\u06cc\u062f.","Please select State\/Province.":"\u0644\u0637\u0641\u0627 \u0627\u0633\u062a\u0627\u0646 \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u0646\u0645\u0627\u06cc\u06cc\u062f.","Please enter a number greater than 0 in this field.":"\u0644\u0637\u0641\u0627 \u062f\u0631 \u0627\u06cc\u0646 \u0641\u06cc\u0644\u062f \u0639\u062f\u062f\u06cc \u0628\u0632\u0631\u06af\u200c\u062a\u0631 \u0627\u0632 \u06f0 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f.","Please enter a number 0 or greater in this field.":"\u0644\u0637\u0641\u0627 \u0634\u0645\u0627\u0631\u0647 \u06f0 \u0648 \u06cc\u0627 \u0628\u06cc\u0634\u062a\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0632\u0645\u06cc\u0646\u0647 \u0631\u0627 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.","Please enter a valid credit card number.":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0634\u0645\u0627\u0631\u0647\u200c\u06cc \u06a9\u0627\u0631\u062a \u0627\u0639\u062a\u0628\u0627\u0631\u06cc \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f.","Incorrect credit card expiration date.":"\u062a\u0627\u0631\u06cc\u062e \u0627\u0646\u0642\u0636\u0627 \u06a9\u0627\u0631\u062a \u0627\u0639\u062a\u0628\u0627\u0631\u06cc \u0646\u0627\u062f\u0631\u0633\u062a \u0627\u0633\u062a.","Please enter a valid credit card verification number.":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0634\u0645\u0627\u0631\u0647\u200c\u06cc \u0627\u0645\u0646\u06cc\u062a\u06cc \u06a9\u0627\u0631\u062a \u0627\u0639\u062a\u0628\u0627\u0631\u06cc \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f.","Please use only letters (a-z or A-Z), numbers (0-9) or underscore(_) in this field, first character should be a letter.":"\u0644\u0637\u0641\u0627 \u062f\u0631 \u0627\u06cc\u0646 \u0641\u06cc\u0644\u062f \u062a\u0646\u0647\u0627 \u0627\u0632 \u062d\u0631\u0648\u0641 (a-z)\u060c \u0627\u0639\u062f\u0627\u062f (0-9) \u06cc\u0627 \u0632\u06cc\u0631\u062e\u0637 (_) \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0646\u0645\u0627\u06cc\u06cc\u062f\u060c \u0627\u0648\u0644\u06cc\u0646 \u06a9\u0627\u0631\u0627\u06a9\u062a\u0631 \u0628\u0627\u06cc\u062f \u06cc\u06a9 \u062d\u0631\u0641 \u0628\u0627\u0634\u062f.","Text length does not satisfy specified text range.":"\u0637\u0648\u0644 \u0645\u062a\u0646 \u0645\u0648\u0631\u062f \u0646\u0638\u0631 \u0628\u0627 \u0645\u0642\u062f\u0627\u0631 \u062a\u0639\u06cc\u06cc\u0646 \u0634\u062f\u0647 \u0647\u0645\u062e\u0648\u0627\u0646\u06cc \u0646\u062f\u0627\u0631\u062f.","Please enter a number lower than 100.":"\u0644\u0637\u0641\u0627 \u0648\u0627\u0631\u062f \u0643\u0646\u064a\u062f \u0639\u062f\u062f\u0643\u0645\u062a\u0631 \u0627\u0632 \u06f1\u06f0\u06f0.","Please select a file":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0641\u0627\u06cc\u0644 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u062f","Please wait, loading...":"\u0628\u0627\u0631\u06af\u0630\u0627\u0631\u06cc\u060c \u0644\u0637\u0641\u0627 \u0635\u0628\u0631 \u0646\u0645\u0627\u06cc\u06cc\u062f...","This date is a required value.":"\u0627\u06cc\u0646 \u062a\u0627\u0631\u06cc\u062e \u0647\u0633\u062a \u06cc\u06a9 \u0645\u0642\u062f\u0627\u0631 \u0627\u0644\u0632\u0627\u0645\u06cc.","Please enter a valid day (1-%d).":"\u0644\u0637\u0641\u0627 \u064a\u0643 \u0631\u0648\u0632 \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f (1-%d).","Please enter a valid month (1-12).":"\u0644\u0637\u0641\u0627 \u0645\u0627\u0647 \u0645\u0648\u0631\u062f \u0646\u0638\u0631 \u0645\u0639\u062a\u0628\u0631 \u0631\u0627 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f (1-12).","Please enter a valid year (1900-%d).":"\u0644\u0637\u0641\u0627 \u064a\u0643 \u0633\u0627\u0644 \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f(1900-%d).","Please enter a valid full date":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u062a\u0627\u0631\u06cc\u062e \u0645\u0639\u062a\u0628\u0631 \u0631\u0627 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f","Please enter a valid date between %s and %s":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u062a\u0627\u0631\u06cc\u062e \u0645\u0639\u062a\u0628\u0631 \u0628\u06cc\u0646 %s \u0648 %s","Please enter a valid date equal to or greater than %s":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u062a\u0627\u0631\u06cc\u062e \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u0645\u0633\u0627\u0648\u06cc \u06cc\u0627 \u0628\u06cc\u0634\u062a\u0631 \u0627\u0632 %s","Please enter a valid date less than or equal to %s":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u062a\u0627\u0631\u06cc\u062e \u0645\u0639\u062a\u0628\u0631 \u06a9\u0645\u062a\u0631 \u06cc\u0627 \u0645\u0633\u0627\u0648\u06cc \u0628\u0627 %s","Complete":"\u06a9\u0627\u0645\u0644","Add Products":"\u0627\u0641\u0632\u0648\u062f\u0646 \u0645\u062d\u0635\u0648\u0644\u0627\u062a","Please choose to register or to checkout as a guest":"\u0644\u0637\u0641\u0627 \u0628\u0631\u0627\u06cc \u062b\u0628\u062a \u0646\u0627\u0645 \u0648 \u06cc\u0627 \u067e\u0631\u062f\u0627\u062e\u062a \u0628\u0647 \u0639\u0646\u0648\u0627\u0646 \u0645\u0647\u0645\u0627\u0646 \u0627\u06cc\u0646\u062c\u0627 \u06a9\u0644\u06cc\u06a9 \u06a9\u0646\u06cc\u062f","Your order cannot be completed at this time as there is no shipping methods available for it. Please make necessary changes in your shipping address.":"\u0633\u0641\u0627\u0631\u0634 \u0634\u0645\u0627 \u0646\u0645\u06cc \u062a\u0648\u0627\u0646\u062f \u06a9\u0627\u0645\u0644 \u0634\u0648\u062f \u0628\u0647 \u062f\u0644\u06cc\u0644 \u0622\u0646\u06a9\u0647 \u0631\u0648\u0634 \u062d\u0645\u0644 \u0648 \u0646\u0642\u0644 \u0648\u062c\u0648\u062f \u0646\u062f\u0627\u0631\u062f. \u0644\u0637\u0641\u0627 \u0631\u0648\u0634 \u062f\u06cc\u06af\u0631\u06cc \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u062f.","Please specify shipping method.":"\u0644\u0637\u0641\u0627 \u0631\u0648\u0634 \u062d\u0645\u0644 \u0648 \u0646\u0642\u0644 \u0631\u0627 \u0645\u0634\u062e\u0635 \u06a9\u0646\u06cc\u062f.","Your order cannot be completed at this time as there is no payment methods available for it.":"\u0633\u0641\u0627\u0631\u0634 \u0634\u0645\u0627 \u0646\u0645\u06cc \u062a\u0648\u0627\u0646\u062f \u06a9\u0627\u0645\u0644 \u0634\u0648\u062f \u0628\u0647 \u062f\u0644\u06cc\u0644 \u0622\u0646\u06a9\u0647 \u0631\u0648\u0634 \u0647\u0627\u06cc \u067e\u0631\u062f\u0627\u062e\u062a \u062f\u0631 \u062f\u0633\u062a\u0631\u0633 \u0646\u06cc\u0633\u062a.","Please specify payment method.":"\u0644\u0637\u0641\u0627 \u0631\u0648\u0634 \u067e\u0631\u062f\u0627\u062e\u062a \u0631\u0627 \u0645\u0634\u062e\u0635 \u06a9\u0646\u06cc\u062f.","Add to Cart":"\u0627\u0641\u0632\u0648\u062f\u0646 \u0628\u0647 \u0633\u0628\u062f","In Stock":"\u0645\u0648\u062c\u0648\u062f","Out of Stock":"\u0646\u0627\u0645\u0648\u062c\u0648\u062f"});
+//]]></script>
+    <!-- SKIN MENU -->
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/skin/frontend/default/atd/css/menu1.css' %}" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/skin/frontend/default/atd/css/animations.css' %}" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/skin/frontend/default/atd/css/responsive.css' %}" media="screen"/>
+    <!-- SKIN ZOOM -->
+    <script type="text/javascript" src="{% static 'sanjekish/js/zoom/easyzoom.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/skin/frontend/default/atd/css/easyzoom.css' %}" media="screen"/>
+    <!-- SWIPEBOX -->
+    <script type="text/javascript" src="{% static 'sanjekish/js/jquery/swipebox/ios-orientationchange-fix.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/jquery/swipebox/jquery.swipebox.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/js/jquery/swipebox/swipebox.css' %}" media="screen"/>
+    <!-- REVOLUTION -->
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/skin/frontend/default/atd/rs-plugin/revolution-css/fullwidth.css' %}" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/skin/frontend/default/atd/rs-plugin/css/settings.css' %}" media="screen" />
+    <script type="text/javascript" src="{% static 'sanjekish/js/revolution/jquery.themepunch.plugins.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/revolution/jquery.themepunch.revolution.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/slideshow/jquery.slider.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/skin/frontend/default/atd/css/slider.css' %}" media="all" />
+    <script type="text/javascript" src="{% static 'sanjekish/js/jquery/jquery.selectbox.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/skin/frontend/default/atd/css/selectbox.css' %}" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/skin/frontend/default/atd/css/jquery.bxslider.css' %}" />
+    <script type="text/javascript" src="{% static 'sanjekish/js/jquery/jquery.bxslider.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/twitter/jquery.tweet.js' %}"></script>
+    <script type="text/javascript" src="{% static 'sanjekish/js/jquery/skrollr.min.js' %}"></script>
+    {#    <style type="text/css">#}
+    {#        /* Colors & Skins */#}
+    {#        .buttons-cart:hover, .footer-social a:hover, .bx-wrapper .bx-next:hover, .bx-wrapper .bx-prev:hover, .shop-about .shop-about-text a.more:hover, .minicart-wrapper .icon:hover, .toolbar, .product-view .product-img-box .main-image a.lightbox-btn:hover, #footer #message a:hover, .prev:hover, .next:hover, .buttons-cart:hover, .product-tabs li:hover a, .social-share .image:hover, .quantity_box_button_down:hover, .quantity_box_button_up:hover, .minicart-wrapper .minicart, .widget_custom_box_left #custom_box_icon, .show-more-button, .saleproduct_label, button.button, .button, .box-product-buttons a:not(.buttons-cart) { background-color: #c2a26f; }#}
+    {#        button.button:hover, .button:hover, .box-product-buttons a:hover:not(.buttons-cart), .product-tabs li a, .quantity_box_button_up, .quantity_box_button_down, input.qty, .custom-footer-contact .contact-icon, .footer-social a, .minicart-wrapper .icon, .newproduct_label, .buttons-cart, .show-more-button:hover, .shop-about .shop-about-text .text { background-color: #3D4445; }#}
+    {#        .nav-container { background-color: #EE3324 ; }#}
+    {#        .shop-about .shop-about-news li h2 a:hover, #nav.nav1 .level1 > a > span, .block .block-content .product-name a:hover, .block-layered-nav dt:hover, #nav > li.active > a, #nav .custommenuitem.blog a, a, .box-product-item .name a:hover, #nav ul li a:hover, .left-categorys a:hover, .block-layered-nav dd li a:hover, #header_menu .links li a:hover, #nav.nav1 > li > ul > li ul > li a:hover, #nav.nav1 .custom_menu_item li.level2 a:hover { color: #c2a26f; }#}
+    {#        .postInfo, .postWrapper .postInfo .leftInfo, .postWrapper .postInfo .centerInfo, .shop-about .shop-about-text a.more:hover, .block-cart-header #header-items, .widget_custom_box_left .custom_box { border-color: #c2a26f; }#}
+    {#        #nav > li.over, #nav > li:hover, #nav > li > ul, #nav div, #nav .chield, #nav.nav1 > li > ul > li ul, #nav li div.custom_menu_item, #nav.nav2 > li > ul > li ul ul { background-color: #4A5456; }#}
+    {#        #nav.nav1 > li > ul > li ul, #nav.nav2 > li > ul > li ul, #nav li div.custom_menu_item, #nav.nav2 > li > ul > li ul ul ul { background-color: #3D4445; }#}
+    {#        .header-menu-wrapper, .selectbox .dropdown { background-color: #4A5656; }#}
+    {#        #nav > li > ul > li ul > li a, #nav .custom_menu_item li.level2 a, #nav ul li a { color: #A3A8A9; }#}
+    {#        .footer-container { background-color: #4A5656; }#}
+    {#        #footer .column, #footer .column a { color: #A3A8A9; }#}
+    {#        .box-product-item:hover, .products-list li.item:hover { border-color: #EAE9E9; }#}
+    {#    </style>#}
+    <script type="text/javascript">
+        window.onload = function() {
+            skrollr.init({
+                forceHeight: false
+            });
+        }
+        var tpj=jQuery;
+        tpj.noConflict();
+        // tpj(window).on('load resize', function(e) {
+        // if (tpj(window).width() > 768 ) {
+        // tpj(document).on('ready scroll', function() {
+        // if (tpj(document).scrollTop() > 0 ) {
+        // var hheight = tpj('#top-head').outerHeight();
+        // tpj('#top-head').addClass('fixed');
+        // tpj('.megamenu-pc').css('padding-top', hheight);
+        // }
+        // else {
+        // tpj('.megamenu-pc').css('padding-top', 0);
+        // tpj('#top-head').removeClass('fixed');
+        // }
+        // });
+        // }
+        // });
+        tpj(document).ready(function() {
+            if (tpj.fn.cssOriginal!=undefined)
+                tpj.fn.css = tpj.fn.cssOriginal;
+            tpj('.fullwidthbanner').revolution(
+                {
+                    delay:9000,
+                    startwidth:980,
+                    startheight:480,
+                    onHoverStop:"on", // Stop Banner Timet at Hover on Slide on/off
+                    thumbWidth:100, // Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
+                    thumbHeight:50,
+                    thumbAmount:3,
+                    hideThumbs:0,
+                    navigationType:"bullet", // bullet, thumb, none
+                    navigationArrows:"solo", // nexttobullets, solo (old name verticalcentered), none
+                    navigationStyle:"round", // round,square,navbar,round-old,square-old,navbar-old, or any from the list in the docu (choose between 50+ different item), custom
+                    navigationHAlign:"center", // Vertical Align top,center,bottom
+                    navigationVAlign:"bottom", // Horizontal Align left,center,right
+                    navigationHOffset:0,
+                    navigationVOffset:20,
+                    soloArrowLeftHalign:"left",
+                    soloArrowLeftValign:"center",
+                    soloArrowLeftHOffset:20,
+                    soloArrowLeftVOffset:0,
+                    soloArrowRightHalign:"right",
+                    soloArrowRightValign:"center",
+                    soloArrowRightHOffset:20,
+                    soloArrowRightVOffset:0,
+                    touchenabled:"on", // Enable Swipe Function : on/off
+                    stopAtSlide:-1, // Stop Timer if Slide "x" has been Reached. If stopAfterLoops set to 0, then it stops already in the first Loop at slide X which defined. -1 means do not stop at any slide. stopAfterLoops has no sinn in this case.
+                    stopAfterLoops:0, // Stop Timer if All slides has been played "x" times. IT will stop at THe slide which is defined via stopAtSlide:x, if set to -1 slide never stop automatic
+                    hideCaptionAtLimit:0, // It Defines if a caption should be shown under a Screen Resolution ( Basod on The Width of Browser)
+                    hideAllCaptionAtLilmit:0, // Hide all The Captions if Width of Browser is less then this value
+                    hideSliderAtLimit:0, // Hide the whole slider, and stop also functions if Width of Browser is less than this value
+                    fullWidth:"on",
+                    shadow:0 //0 = no Shadow, 1,2,3 = 3 Different Art of Shadows - (No Shadow in Fullwidth Version !)
+                });
+        });
+    </script>
+    <script type="text/javascript"><!--
+    jQuery(document).ready(function() {
+// Move search to menu
+        jQuery('.form-search button.button').insertBefore('.form-search input.input-text').show();
+        jQuery('.top-bar').insertAfter('.header-right').show();
+// Show blog posts in News
+// $('.shop-about-news ul').html($('#awbloglatest').html());
+// Blocks sliders
+        jQuery('.shop-about-news .bxslider').bxSlider({
+            mode: 'vertical',
+            pager: false
+        });
+        jQuery('.shop-about-slider .bxslider').bxSlider({
+            mode: 'horizontal',
+            auto: true,
+            controls: false
+        });
+        jQuery(function(){
+            jQuery(".widget_facebook_right").hover(function(){
+                    jQuery(".widget_facebook_right").stop(true, false).animate({right: "0" }, 800, 'easeOutQuint' );
+                },
+                function(){
+                    jQuery(".widget_facebook_right").stop(true, false).animate({right: "-245" }, 800, 'easeInQuint' );
+                },1000);
+        });
+        jQuery(function(){
+            jQuery(".widget_custom_box_left").hover(function(){
+                    jQuery(".widget_custom_box_left").stop(true, false).animate({left: "0" }, 800, 'easeOutQuint' );
+                },
+                function(){
+                    jQuery(".widget_custom_box_left").stop(true, false).animate({left: "-245" }, 800, 'easeInQuint' );
+                },1000);
+        });
+// Image animation
+        jQuery(".fade-image").live({
+                mouseenter:
+                    function()
+                    {
+                        jQuery(this).stop().fadeTo(300, 0.6);
+                    },
+                mouseleave:
+                    function()
+                    {
+                        jQuery(this).stop().fadeTo(300, 1);
+                    }
+            }
+        );
+        jQuery('#header_menu select, .pager select').selectbox();
+        jQuery(".show-more-button").live('click', function(event) {
+            event.preventDefault();
+            var i = 0;
+            var parent_container = jQuery(this).parent();
+            parent_container.find(jQuery('.hidethisblock .box-product-item')).each(function(){
+                if(i < 4) {
+                    jQuery(this).hide().appendTo(parent_container.find(jQuery('.more-module'))).slideDown();
+                }
+                i++;
+            });
+            jQuery('html, body').delay(500).animate({
+                scrollTop: parent_container.find(jQuery('.more-module .box-product-item')).last().offset().top
+            }, 500);
+            if(parent_container.find(jQuery('.hidethisblock .box-product-item')).length == 0) {
+                jQuery(this).fadeOut();
+            }
+        });
+    });
+    // Add any JavaScript code here-->
+    </script>
+    <!--majidian-->
+    {#    <script>#}
+    {#        jQuery(document).ready(function() {#}
+    {#            jQuery('#region_id').change(function(){#}
+    {#                var myState = jQuery(this).val();#}
+    {#                if(myState == 491){#}
+    {#                    try {#}
+    {#                        if(jQuery('#telephone').hasClass('validate-shahrestan-tel') )#}
+    {#                            jQuery('#telephone').removeClass('validate-shahrestan-tel');#}
+    {#                        jQuery('#telephone').addClass('validate-tehran-tel');#}
+    {#                    }#}
+    {#                    catch(e) {#}
+    {#                    }#}
+    {#                }else{#}
+    {#                    try {#}
+    {#                        if(jQuery('#telephone').hasClass('validate-tehran-tel') )#}
+    {#                            jQuery('#telephone').removeClass('validate-tehran-tel');#}
+    {#                        jQuery('#telephone').addClass('validate-shahrestan-tel');#}
+    {#                    }#}
+    {#                    catch(e) {#}
+    {#                    }#}
+    {#                }#}
+    {#            });#}
+    {#            jQuery("select[name='billing[region_id]']").change(function(){#}
+    {#                var myState = jQuery(this).val();#}
+    {#                try{#}
+    {#                    var telObj = jQuery("input[name='billing[telephone]']");#}
+    {#                    if(myState == 491){#}
+    {#                        if(telObj.hasClass('validate-shahrestan-tel') )#}
+    {#                            telObj.removeClass('validate-shahrestan-tel');#}
+    {#                        telObj.addClass('validate-tehran-tel');#}
+    {#                    }else{#}
+    {#                        if(telObj.hasClass('validate-tehran-tel') )#}
+    {#                            telObj.removeClass('validate-tehran-tel');#}
+    {#                        telObj.addClass('validate-shahrestan-tel');#}
+    {#                    }#}
+    {#                }#}
+    {#                catch(e) {#}
+    {#                }#}
+    {#            });#}
+    {#            jQuery("select[name='shipping[region_id]']").change(function(){#}
+    {#                var myState = jQuery(this).val();#}
+    {#                try{#}
+    {#                    var telObj = jQuery("input[name='shipping[telephone]']");#}
+    {#                    if(myState == 491){#}
+    {#                        if(telObj.hasClass('validate-shahrestan-tel') )#}
+    {#                            telObj.removeClass('validate-shahrestan-tel');#}
+    {#                        telObj.addClass('validate-tehran-tel');#}
+    {#                    }else{#}
+    {#                        if(telObj.hasClass('validate-tehran-tel') )#}
+    {#                            telObj.removeClass('validate-tehran-tel');#}
+    {#                        telObj.addClass('validate-shahrestan-tel');#}
+    {#                    }#}
+    {#                }#}
+    {#                catch(e) {#}
+    {#                }#}
+    {#            });#}
+    {#        });#}
+    {#    </script>#}
+    <!--majidian end-->
+    <style>
+        body{
+            background-color:#f6f7f8;
+            background-attachment: ;
+            background-position: ;
+            background-repeat: ;
+        }
+        .product-view .product-shop .product_right {
+            display:none;
+        }
+        .product-view .product-shop .white-back {
+            width: 470px;
+            margin-right: 0;
+            padding: 20px 25px 55px 20px;
+        }
+        /* Add any CSS code here */
+    </style>
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/skin/frontend/default/atd/css/rtl.css' %}" media="screen"/>
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/skin/frontend/default/atd/css/ie7.css' %}" media="screen"/>
+    <![endif]-->
+    <!--[if IE 9]>
+    <link rel="stylesheet" type="text/css" href="{% static 'sanjekish/skin/frontend/default/atd/css/ie9.css' %}" media="screen"/>
+    <![endif]-->
+</head>
+<body class=" cms-index-index cms-home">
+<div class="wrapper">
+    <noscript>
+        <div class="global-site-notice noscript">
+            <div class="notice-inner">
+                <p>
+                    <strong>JavaScript seems to be disabled in your browser.</strong><br />
+                    برای به کار گرفتن قابلیت این وب‌سایت، باید JavaScript در مرورگرتان ممکن‌شده باشد. </p>
+            </div>
+        </div>
+    </noscript>
+    {#    <div class="mobile-links">#}
+    {#        <div class="links-container">#}
+    {#            <ul class="links">#}
+    {#                <li class="first "#}
+    {#                >#}
+    {#                    <a href="customer/account/index.html"#}
+    {#                       title="ورود یا ثبت نام " >#}
+    {#                        ورود یا ثبت نام </a></li>#}
+    {#                <li ><a href="wishlist/index.html" title="لیست دلخواه من" >لیست دلخواه من</a></li>#}
+    {#                <li class=" last"#}
+    {#                >#}
+    {#                    <a href="checkout/cart/index.html"#}
+    {#                       title="سبد من" class="top-link-cart">#}
+    {#                        سبد من</a></li>#}
+    {#            </ul>#}
+    {#        </div>#}
+    {#    </div>#}
+    <div id="top-head">
+        <div class="header-menu-wrapper" id="topnav">
+            <div id="header_menu" class="clearfix">
+                <!-- cart -->
+                <div class="minicart-wrapper">
+                    <div class="minicart minicompare">
+                        <i class="fa fa-clone"></i>
+                        <div class="block block-cart-header block-mini-compare">
+                            <div class="block-content">
+<span class="button-show"><a href="#" target="_blank">Info@radmehr-co.com</a>
+</span>
+                                {#۰ </span>#}
+                                {#                                <div id="header-items" class="empty">#}
+                                {#                                    <p class="empty">شما آیتمی برای مقایسه ندارید.</p>#}
+                                {#                                </div>#}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="minicart">
+                        {#                        <i class="fa fa-shopping-basket"></i>#}
+                        <i class="fa fa-building"></i></i>
+                        <div class="block block-cart-header block-mini-cart">
+                            <div class="block-content">
+<span class="button-show"><a href="{% url 'pages:page_detail' 'branch-request' %}">درخواست نمایندگی</a>
+
+{#<span class="price">‎۰ تومان</span>#}
+</span>
+                                {#                                <div id="header-items" class="empty">#}
+                                {#                                    <p class="empty">شما هیچ آیتمی در سبد خریدتان ندارید.</p>#}
+                                {#                                </div>#}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- / cart -->
+                <span class="hotline">
+<i class="fa fa-phone-square"></i>
+{#۲۳۲۸ ۰۲۱ </span>#}
+77194474 021 </span>
+                <ul class="links">
+                    <li class="first "
+                    >
+                        <a href="#"
+                           title="ورود یا ثبت نام " >
+                            ورود یا ثبت نام </a></li>
+                    {#                    <li ><a href="wishlist/index.html" title="لیست دلخواه من" >لیست دلخواه من</a></li>#}
+                    <li class=" last">
+                        {#                        <a href="checkout/cart/index.html"#}
+                        {#                           title="سبد من" class="top-link-cart">#}
+                        {#                            سبد من</a>#}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--placeholder div to prevent jumpy content when nav gets pinned-->
+        <div class="header-container">
+            <div class="header">
+                <div class="header-right">
+                    <a href="{% url 'homepage:home' %}" title="شرکت بازرگانی رادمهر" class="logo">
+                        <img src="{% static 'sanjekish/skin/frontend/base/default/default/logo.jpg' %}" alt="شرکت بازرگانی رادمهر" />
+                        {#                        <img src="{% static 'img/logo/radmehr.png' %}" alt="شرکت بازرگانی رادمهر" />#}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div><? // class=page ?>
+</div>
+<div class="megamenu-pc ms-megamenu">
+    <ul id="ms-topmenu" class="ms-topmenu">
+        <li class="ms-level0 nav-12" id="nav-12">
+            <a class="ms-label ms-hassubmenu" href="{% url 'brands:brand' %}">
+                برندها </a>
+            <div class="ms-submenu col-xs-12 sub_right position_auto" id="submenu-12">
+                <div class="ms-content">
+                    <div class="ms-maincontent" style="float:left;width:0%;display:none;">
+                        <div class="row ms-category">
+                            <div class="col-category col-xs-24">
+                                <a class="form-group level1" href="brands/delonghi.html">دلونگی</a>
+                                <a class="form-group level2" href="brands/delonghi/.html">پخت و پز</a>
+                                <a class="form-group level2" href="brands/delonghi/food-processor.html">غذاساز</a>
+                                <a class="form-group level2" href="brands/delonghi/hot-beverage.html">نوشیدنی‌های گرم</a>
+                                <a class="form-group level2" href="brands/delonghi/ironing-cleaning.html">نظافت و اتوکشی</a>
+                                <a class="form-group level2" href="brands/delonghi/heating-cooling.html">حرارتی،برودتی و تصفیه</a>
+                            </div>
+                            <div class="col-category col-xs-24">
+                                <a class="form-group level1" href="brands/laurastar/cleaning-ironing.html">نظافت و اتوکشی</a>
+                                <a class="form-group level2" href="brands/laurastar/cleaning-ironing/steam-system-ironing.html">اتو مخزن دار</a>
+                                <a class="form-group level2" href="brands/laurastar/cleaning-ironing/ironing-system.html">سامانه اتوکشی</a>
+                                <a class="form-group level1" href="brands/polti/cleaning-ironing.html">نظافت و اتوکشی</a>
+                            </div>
+                            <div class="col-category col-xs-24">
+                                <a class="form-group level1" href="brands/feller.html">فلر</a>
+                                <a class="form-group level2" href="brands/feller/cooking.html">پخت و پز</a>
+                                <a class="form-group level2" href="brands/feller/food-processor.html">غذاساز</a>
+                                <a class="form-group level2" href="brands/feller/hot-beverage.html">نوشیدنی های گرم</a>
+                                <a class="form-group level2" href="brands/feller/heating-cooling.html">حرارتی،برودتی و تصفیه</a>
+                                <a class="form-group level2" href="brands/feller/cleaning-ironing.html">نظافت و اتوکشی</a>
+                                <a class="form-group level2" href="brands/feller/personal-care.html">لوازم شخصی برقی</a>
+                            </div>
+                            <div class="col-category col-xs-24">
+                                <a class="form-group level1" href="brands/matheo.html">متئو</a>
+                                <a class="form-group level2" href="brands/matheo/cooking.html">پخت و پز</a>
+                                <a class="form-group level2" href="brands/matheo/food-processor.html">غذاساز</a>
+                                <a class="form-group level2" href="brands/matheo/hot-beverage.html">نوشیدنی‌های گرم</a>
+                                <a class="form-group level2" href="brands/matheo/cleaning-ironing.html">نظافت و اتوکشی</a>
+                                <a class="form-group level2" href="brands/matheo/heating-cooling.html">حرارتی،برودتی و تصفیه</a>
+                                <a class="form-group level2" href="brands/matheo/scales.html">ترازوها</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-featured"style="float:right;width:100%;">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                {% show_brands_in_menu %}
+
+
+                                <style type="text/css"><!--
+                                .img-menu-product-netweb {
+                                    float: left;
+                                }
+                                .ms-featured {
+                                    padding-left: 0;
+                                }
+                                .ms-footer {
+                                    border: 0;
+                                }
+                                .col-category .level1[href*="/brands/delonghi"]:before {
+                                    display: none;
+                                }
+                                .col-category .level1[href*="/brands/feller"]:before {
+                                    display: none;
+                                }
+                                .col-category .level1[href*="/brands/matheo"]:before {
+                                    display: none;
+                                }
+                                --></style></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+{#        <li class="ms-level0 nav-5" id="nav-5">#}
+{#            <a class="ms-label ms-hassubmenu" href="food-processor.html">#}
+{#                لیست نمایندگی ها</a>#}
+{#        </li>#}
+{#        {% show_menu_elements %}#}
+        <li class="ms-level0 nav-6" id="nav-6">
+            <a class="ms-label ms-hassubmenu" href="{% url 'events:seminar_view' %}">
+                همایش ها </a>
+        </li>
+        <li class="ms-level0 nav-7" id="nav-7">
+            <a class="ms-label ms-hassubmenu" href="{% url 'events:exhibition_view' %}">
+                نمایشگاه‌ها</a>
+        </li>
+        <li class="ms-level0 nav-8" id="nav-8">
+            <a class="ms-label ms-hassubmenu" href="{% url 'pages:page_detail' 'terms' %}">
+                شرایط نمایندگی</a>
+        </li>
+        <li class="ms-level0 nav-9" id="nav-9">
+            <a class="ms-label ms-hassubmenu" href="{% url 'pages:page_detail' 'radmehr-team'  %}">
+                تیم رادمهر </a>
+        </li>
+
+        <li class="ms-level0 nav-10" id="nav-10">
+            <a class="ms-label ms-hassubmenu" href="{% url 'pages:page_detail' 'about-us'  %}">
+                درباره ما </a>
+        </li>
+        <li class="ms-level0 nav-27" id="nav-27">
+            <a class="ms-label ms-hassubmenu" href="{% url 'pages:page_detail' 'contact'  %}">
+                تماس با ما </a>
+        </li>
+        <li class="ms-level0 nav-13" id="nav-13">
+            <a class="ms-label ms-hassubmenu" href="{% url 'pages:page_detail' 'after-sale-services' %}">
+                خدمات پس‌از‌فروش </a>
+{#            <div class="ms-submenu col-xs-12 sub_right position_auto" id="submenu-13">#}
+{#                <div class="ms-content">#}
+{#                    <div class="ms-maincontent" >#}
+{#                        <ul>#}
+{#                            <li><a href="support.html">نمایندگیهای خدمات پس از فروش</a></li>#}
+{#                            <li><a href="http://2328.ir/Consoles/Ware/" target="_blank">ثبت سفارش</a></li>#}
+{#                            <li><a href="http://2328.ir/Consoles/Ware/FollowUp/" target="_blank">پیگیری&nbsp;سفارش</a></li>#}
+{#                            <li><a href="http://2328.ir/Consoles/WorkShopCenter/" target="_blank">اطلاع از وضعیت سرویس</a></li>#}
+{#                            <li><a href="post.html">خدمات پس از فروش از طریق پست</a></li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+        </li>
+    </ul>
+</div>
+<!-- For Mobile-->
+<div class="megamenu-mobile ms-megamenu mb-version">
+    <div class="anchor_mbmenu col-xs-12 text-right"><a class="anchor_mbmenu_text glyphicon glyphicon-align-justify"></a></div>
+    <div id="mb-topmenu" class="mb-topmenu">
+        <div class="mb-level0 nav-12" id="nav-12">
+            <a class="mb-label mb-click col-xs-12 text-left" >برندها<span class="glyphicon small glyphicon-plus">&nbsp;</span></a>
+            <div class="mb-submenu blind" id="submenu-12">
+                <div class="mb-submain col-xs-12">
+                    <div class="mb-content form-group">
+                        <div class="mb-maincontent col-sm-0 col-xs-12"style="display:none;">
+                            <div class="row ms-category-level">
+                                <div class="col-category col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="brands/delonghi.html">دلونگی</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/delonghi/.html">پخت و پز</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/delonghi/food-processor.html">غذاساز</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/delonghi/hot-beverage.html">نوشیدنی‌های گرم</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/delonghi/ironing-cleaning.html">نظافت و اتوکشی</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/delonghi/heating-cooling.html">حرارتی،برودتی و تصفیه</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="brands/laurastar/cleaning-ironing.html">نظافت و اتوکشی</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/laurastar/cleaning-ironing/steam-system-ironing.html">اتو مخزن دار</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/laurastar/cleaning-ironing/ironing-system.html">سامانه اتوکشی</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level ">
+                                            <a class="form-group" href="brands/polti/cleaning-ironing.html">نظافت و اتوکشی</a>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="brands/feller.html">فلر</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/feller/cooking.html">پخت و پز</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/feller/food-processor.html">غذاساز</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/feller/hot-beverage.html">نوشیدنی های گرم</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/feller/heating-cooling.html">حرارتی،برودتی و تصفیه</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/feller/cleaning-ironing.html">نظافت و اتوکشی</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/feller/personal-care.html">لوازم شخصی برقی</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="brands/matheo.html">متئو</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/matheo/cooking.html">پخت و پز</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/matheo/food-processor.html">غذاساز</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/matheo/hot-beverage.html">نوشیدنی‌های گرم</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/matheo/cleaning-ironing.html">نظافت و اتوکشی</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/matheo/heating-cooling.html">حرارتی،برودتی و تصفیه</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="brands/matheo/scales.html">ترازوها</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden-lg hidden-md hidden-sm col-xs-12 form-group"></div>
+                        <div class="mb-featured col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-sm-12"><div class="col-category col-sm-3 col-md-3 col-xs-12"><a class="form-group level1" href="brands/delonghi.html"><img height="28" src="{% static 'sanjekish/media/wysiwyg/logo/Delonghi-png_1.png' %}" width="70" /><span style="vertical-align: bottom;">&nbsp;دلونگی</span></a> <a class="form-group level2" href="brands/delonghi/.html">پخت و پز</a> <a class="form-group level2" href="brands/delonghi/food-processor.html">غذاساز</a> <a class="form-group level2" href="brands/delonghi/hot-beverage.html">نوشیدنی های گرم</a> <a class="form-group level2" href="brands/delonghi/ironing-cleaning.html">نظافت و اتوکشی</a> <a class="form-group level2" href="brands/delonghi/heating-cooling.html">حرارتی،برودتی و تصفیه</a></div>
+                                    <div class="col-category col-sm-3 col-md-3 col-xs-12"><a class="form-group level1" href="brands/migel.html"><img height="28" src="{% static 'sanjekish/media/wysiwyg/logo/Migel.png' %}" width="70" /><span style="vertical-align: bottom;">&nbsp;میگل</span></a> <a class="form-group level2" href="brands/migel/cooking.html">پخت و پز</a> <a class="form-group level2" href="brands/migel/food-processor.html">غذاساز</a> <a class="form-group level2" href="brands/migel/hot-beverage.html">نوشیدنی های گرم</a> <a class="form-group level2" href="brands/migel/heating-cooling.html">حرارتی،برودتی و تصفیه</a> <a class="form-group level2" href="brands/migel/cleaning-and-ironing.html">نظافت و اتوکشی</a><a href="brands/migel/personal-care.html">لوازم شخصی برقی</a><a class="form-group level2" href="brands/migel/scales.html">ترازوها</a>&nbsp;</div>
+                                    <div class="col-category col-sm-3 col-md-3 col-xs-12"><a class="form-group level1" href="brands/feller.html"><img height="28" src="{% static 'sanjekish/media/wysiwyg/logo/Feller.png' %}" width="70" /><span style="vertical-align: bottom;">&nbsp;فلر</span></a> <a class="form-group level2" href="brands/feller/cooking.html">پخت و پز</a> <a class="form-group level2" href="brands/feller/food-processor.html">غذاساز</a> <a class="form-group level2" href="brands/feller/hot-beverage.html">نوشیدنی های گرم</a> <a class="form-group level2" href="brands/feller/heating-cooling.html">حرارتی،برودتی و تصفیه</a> <a class="form-group level2" href="brands/feller/cleaning-ironing.html">نظافت و اتوکشی</a> <a class="form-group level2" href="brands/feller/personal-care.html">لوازم شخصی برقی</a></div>
+                                    <div class="col-category col-sm-3 col-md-3 col-xs-12" style="border-left: 0 !important;"><a class="form-group level1" href="brands/matheo.html"><img height="28" src="{% static 'sanjekish/media/wysiwyg/logo/Matheo.png' %}" width="70" /><span style="vertical-align: bottom;"> &nbsp;متئو</span></a> <a class="form-group level2" href="brands/matheo/cooking.html">پخت و پز</a> <a class="form-group level2" href="brands/matheo/food-processor.html">غذاساز</a> <a class="form-group level2" href="brands/matheo/hot-beverage.html">نوشیدنی&zwnj;های گرم</a> <a class="form-group level2" href="brands/matheo/cleaning-ironing.html">نظافت و اتوکشی</a> <a class="form-group level2" href="brands/matheo/heating-cooling.html">حرارتی،برودتی و تصفیه</a> <a class="form-group level2" href="brands/matheo/scales.html">ترازوها</a></div>
+                                    <style type="text/css"><!--
+                                    .img-menu-product-netweb {
+                                        float: left;
+                                    }
+                                    .ms-featured {
+                                        padding-left: 0;
+                                    }
+                                    .ms-footer {
+                                        border: 0;
+                                    }
+                                    .col-category .level1[href*="/brands/delonghi"]:before {
+                                        display: none;
+                                    }
+                                    .col-category .level1[href*="/brands/feller"]:before {
+                                        display: none;
+                                    }
+                                    .col-category .level1[href*="/brands/matheo"]:before {
+                                        display: none;
+                                    }
+                                    --></style></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-level0 nav-5" id="nav-5">
+            <a class="mb-label mb-click col-xs-12 text-left" >غذاساز<span class="glyphicon small glyphicon-plus">&nbsp;</span></a>
+            <div class="mb-submenu blind" id="submenu-5">
+                <div class="mb-submain col-xs-12">
+                    <div class="mb-content form-group">
+                        <div class="mb-maincontent col-sm-0 col-xs-12"style="display:none;">
+                        </div>
+                        <div class="hidden-lg hidden-md hidden-sm col-xs-12 form-group"></div>
+                        <div class="mb-featured col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-sm-12"><div class="col-category col-sm-4 col-md-4 col-xs-12"><a class="form-group level1" href="food-processor/food-maker.html" style="color: #579642;">غذاساز</a> <a class="form-group level2" href="food-processor/food-maker/food-processor.html">غذاساز</a> <a class="form-group level2" href="food-processor/food-maker/hand-food-processor.html">همزن ایستاده (گوشتکوب برقی)</a> <a class="form-group level2" href="food-processor/food-maker/.html">خردکن</a> <a class="form-group level2" href="food-processor/food-maker/blender.html">مخلوط کن</a> <a class="form-group level2" href="food-processor/food-maker/meat-grinder.html">چرخ گوشت </a> <a class="form-group level2" href="food-processor/food-maker/electric-grinder.html">آسیاب برقی</a></div>
+                                    <div class="col-category col-sm-4 col-md-4 col-xs-12"><a class="form-group level1" href="food-processor/juicer.html" style="color: #579642;">آبمیوه&zwnj;گیری و آب مرکبات گیری</a> <a class="form-group level2" href="food-processor/juicer/fruit-juicer.html">آب میوه گیری</a> <a class="form-group level2" href="food-processor/juicer/citrus-juicer.html">آب مرکبات گیری</a></div>
+                                    <div class="col-category col-sm-4 col-md-4 col-xs-12" style="border-left: 0 !important;"><a class="form-group level1" href="food-processor/food-mixer.html" style="color: #579642;">همزن</a> <a class="form-group level2" href="food-processor/food-mixer/profesional-hand-blender.html">ماشین آشپزخانه</a><a class="form-group level2" href="food-processor/food-mixer/hand-blender.html">همزن دستی</a> <a class="form-group level2" href="food-processor/food-mixer/bowl-hand-blender.html">همزن کاسه دار</a></div>
+                                    <style type="text/css"><!--
+                                    <!— .img-menu-product-netweb {
+                                        float: left;
+                                    }
+                                    .ms-featured {
+                                        padding-left: 0;
+                                    }
+                                    .ms-footer {
+                                        border: 0;
+                                        —>
+                                        --></style></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 form-group"></div>
+                    <div class="mb-footer col-xs-12"><p><img height="192" src="{% static 'sanjekish/media/wysiwyg/simplegreat/MegaMenu/food-proccessors.png' %}" style="position: absolute; z-index: 2; bottom: -27px; left: -56px;" width="272" /></p></div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-level0 nav-6" id="nav-6">
+            <a class="mb-label mb-click col-xs-12 text-left" >نوشیدنی‌ گرم<span class="glyphicon small glyphicon-plus">&nbsp;</span></a>
+            <div class="mb-submenu blind" id="submenu-6">
+                <div class="mb-submain col-xs-12">
+                    <div class="mb-content form-group">
+                        <div class="mb-maincontent col-sm-0 col-xs-12"style="display:none;">
+                            <div class="row ms-category-level">
+                                <div class="col-category col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="hot-beverage/coffee-maker.html">قهوه‌ساز</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="hot-beverage/coffee-maker/fully-automatic-coffee-maker.html">تمام اتوماتیک</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="hot-beverage/coffee-maker/espresso-maker.html">اسپرسوساز</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="hot-beverage/coffee-maker/combination-coffee-maker.html">ترکیبی</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="hot-beverage/coffee-maker/steam-coffee-maker.html">بخار</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="hot-beverage/coffee-maker/french-coffee.html"> فرانسه ساز</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="hot-beverage/tea-maker.html">چای‌ساز</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="hot-beverage/tea-maker/vertical-tea-station.html">چای ساز ایستاده</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="hot-beverage/tea-maker/side-tea-station.html">چای ساز کنار همی </a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="hot-beverage/tea-maker/samovar-tea-station.html">چای ساز سماوری</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="hot-beverage/electric-kettle.html">کتری برقی</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="hot-beverage/electric-kettle/.html">کتری برقی</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden-lg hidden-md hidden-sm col-xs-12 form-group"></div>
+                        <div class="mb-featured col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-sm-12"><div class="col-category col-sm-4 col-md-4 col-xs-12"><a class="form-group level1" href="hot-beverage/coffee-maker.html" style="color: #591d0c;">قهوه&zwnj;ساز</a> <a class="form-group level2" href="hot-beverage/coffee-maker/fully-automatic-coffee-maker.html">قهوه ساز تمام اتوماتیک</a> <a class="form-group level2" href="hot-beverage/coffee-maker/espresso-maker.html">اسپرسوساز</a> <a class="form-group level2" href="hot-beverage/coffee-maker/capsuli-coffee.html">قهوه&zwnj;ساز کپسولی</a> <a class="form-group level2" href="hot-beverage/coffee-maker/combination-coffee-maker.html">قهوه ساز ترکیبی</a> <a class="form-group level2" href="hot-beverage/coffee-maker/french-coffee.html"> فرانسه ساز</a> <a class="form-group level2" href="hot-beverage/coffee-maker/steam-coffee-maker.html">قهوه ساز بخار</a></div>
+                                    <div class="col-category col-sm-4 col-md-4 col-xs-12"><a class="form-group level1" href="hot-beverage/tea-maker.html" style="color: #591d0c;">چای&zwnj;ساز</a> <a class="form-group level2" href="hot-beverage/tea-maker/samovar-tea-station.html">چای ساز سماوری</a> <a class="form-group level2" href="hot-beverage/tea-maker/vertical-tea-station.html">چای ساز ایستاده</a> <a class="form-group level2" href="hot-beverage/tea-maker/side-tea-station.html">چای ساز کنار همی </a></div>
+                                    <div class="col-category col-sm-4 col-md-4 col-xs-12"><a class="form-group level1" href="hot-beverage/electric-kettle.html" style="color: #591d0c;">کتری برقی</a> <a class="form-group level2" href="hot-beverage/electric-kettle/.html">کتری برقی</a></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 form-group"></div>
+                    <div class="mb-footer col-xs-12"><p><img height="192" src="{% static 'sanjekish/media/wysiwyg/simplegreat/MegaMenu/hot-beverage.png' %}" style="position: absolute; z-index: 2; bottom: -27px; left: -56px;" width="272" /></p></div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-level0 nav-7" id="nav-7">
+            <a class="mb-label mb-click col-xs-12 text-left" >پخت و پز<span class="glyphicon small glyphicon-plus">&nbsp;</span></a>
+            <div class="mb-submenu blind" id="submenu-7">
+                <div class="mb-submain col-xs-12">
+                    <div class="mb-content form-group">
+                        <div class="mb-maincontent col-sm-0 col-xs-12"style="display:none;">
+                            <div class="row ms-category-level">
+                                <div class="col-category col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="cooking/cooking-pot.html">پخت و پز</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooking/cooking-pot/rice-cooker.html">پلوپز</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooking/cooking-pot/slow-cooker.html">آرام پز</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooking/cooking-pot/press-cooker.html">زودپز</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooking/cooking-pot/steam-cooker.html">بخارپز </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="cooking/microwave-and-oven.html">مایکروویو و آون</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooking/microwave-and-oven/microwave.html">مایکروویو</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooking/microwave-and-oven/electric-oven.html">آون برقی</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="cooking/sandwich-maker-and-grill.html">ساندویچ‌ساز و گریل</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooking/sandwich-maker-and-grill/sandwich-maker.html">ساندویچ ساز </a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooking/sandwich-maker-and-grill/grill.html">گریل</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooking/sandwich-maker-and-grill/toaster.html">توستر</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="cooking/fryer-56.html">سرخ‌کن</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooking/fryer-56/fryer.html">سرخ کن</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooking/fryer-56/multi-fry.html">سرخ کن (کم روغن)</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden-lg hidden-md hidden-sm col-xs-12 form-group"></div>
+                        <div class="mb-featured col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-sm-12"><div class="col-category col-sm-3 col-md-3 col-xs-12"><a class="form-group level1" href="cooking/cooking-pot.html" style="color: #de772c;">پخت و پز</a> <a class="form-group level2" href="cooking/cooking-pot/rice-cooker.html">پلوپز</a><a class="form-group level2" href="cooking/cooking-pot/press-cooker.html">زودپز</a> <a class="form-group level2" href="cooking/cooking-pot/steam-cooker.html">بخارپز </a> <a class="form-group level2" href="cooking/cooking-pot/slow-cooker.html">آرام پز </a><a href="cooking/cooking-pot/fruit-dryer.html"> <span class="form-group level2">میوه خشک کن</span></a></div>
+                                    <div class="col-category col-sm-3 col-md-3 col-xs-12"><a class="form-group level1" href="cooking/microwave-and-oven.html" style="color: #de772c;">مایکروویو و آون</a> <a class="form-group level2" href="cooking/microwave-and-oven/microwave.html">مایکروویو</a> <a class="form-group level2" href="cooking/microwave-and-oven/electric-oven.html">آون برقی</a></div>
+                                    <div class="col-category col-sm-3 col-md-3 col-xs-12"><a class="form-group level1" href="cooking/sandwich-maker-and-grill.html" style="color: #de772c;">ساندویچ&zwnj;ساز و گریل</a> <a class="form-group level2" href="cooking/sandwich-maker-and-grill/grill.html">گریل</a> <a class="form-group level2" href="cooking/sandwich-maker-and-grill/toaster.html">توستر</a> <a class="form-group level2" href="cooking/sandwich-maker-and-grill/sandwich-maker.html">ساندویچ ساز </a></div>
+                                    <div class="col-category col-sm-3 col-md-3 col-xs-12"><a class="form-group level1" href="cooking/fryer-56.html" style="color: #de772c;">سرخ&zwnj;کن</a> <a class="form-group level2" href="cooking/fryer-56/multi-fry.html">سرخ&zwnj;کن (کم&zwnj;روغن)</a> <a class="form-group level2" href="cooking/fryer-56/fryer.html">سرخ کن</a></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 form-group"></div>
+                    <div class="mb-footer col-xs-12"><p><img height="192" src="{% static 'sanjekish/media/wysiwyg/simplegreat/MegaMenu/cooking.png' %}" style="position: absolute; z-index: 2; bottom: -37px; left: -56px;" width="272" /></p></div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-level0 nav-8" id="nav-8">
+            <a class="mb-label mb-click col-xs-12 text-left" >نظافت و اتوکشی<span class="glyphicon small glyphicon-plus">&nbsp;</span></a>
+            <div class="mb-submenu blind" id="submenu-8">
+                <div class="mb-submain col-xs-12">
+                    <div class="mb-content form-group">
+                        <div class="mb-maincontent col-sm-0 col-xs-12"style="display:none;">
+                            <div class="row ms-category-level">
+                                <div class="col-category col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="cleaning-and-ironing/iron.html">اتو </a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cleaning-and-ironing/iron/steam-iron.html">بخار</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cleaning-and-ironing/iron/steam-station.html"> مخزن‌دار</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cleaning-and-ironing/iron/ironing-system.html">سامانه</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cleaning-and-ironing/iron/press-ironing.html"> پرسی</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="cleaning-and-ironing/vacuum-cleaner.html">جارو برقی</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cleaning-and-ironing/vacuum-cleaner/electrical-vacuum-cleaner.html">جارو برقی </a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cleaning-and-ironing/vacuum-cleaner/rechargable-vacuum-cleaner.html">جارو شارژی</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cleaning-and-ironing/vacuum-cleaner/washing-vacuum-cleaner.html">جارو شوینده</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="cleaning-and-ironing/steam-cleaner.html">بخارشوی</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cleaning-and-ironing/steam-cleaner/suction-steam-cleaner.html">مکنده</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cleaning-and-ironing/steam-cleaner/without-suction-steam-cleaner.html">بدون مکش</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden-lg hidden-md hidden-sm col-xs-12 form-group"></div>
+                        <div class="mb-featured col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-sm-12"><div class="col-category col-sm-4 col-md-4 col-xs-12"><a class="form-group level1" href="cleaning-and-ironing/vacuum-cleaner.html" style="color: #2d2d82;">جارو برقی</a> <a class="form-group level2" href="cleaning-and-ironing/vacuum-cleaner/electrical-vacuum-cleaner.html">جارو برقی </a> <a class="form-group level2" href="cleaning-and-ironing/vacuum-cleaner/rechargable-vacuum-cleaner.html">جارو شارژی</a></div>
+                                    <div class="col-category col-sm-4 col-md-4 col-xs-12"><a class="form-group level1" href="cleaning-and-ironing/steam-cleaner.html" style="color: #2d2d82;">بخارشوی</a> <a class="form-group level2" href="cleaning-and-ironing/steam-cleaner/suction-steam-cleaner.html">مکنده</a> <a class="form-group level2" href="cleaning-and-ironing/steam-cleaner/without-suction-steam-cleaner.html">بدون مکش&nbsp;</a><a class="form-group level2" href="cleaning-and-ironing/steam-cleaner/steam-garment.html">بخارگر</a></div>
+                                    <div class="col-category col-sm-4 col-md-4 col-xs-12"><a class="form-group level1" href="cleaning-and-ironing/iron.html" style="color: #2d2d82;">اتو </a> <a class="form-group level2" href="cleaning-and-ironing/iron/ironing-system.html"> سامانه اتوکشی</a><a class="form-group level2" href="cleaning-and-ironing/iron/steam-station.html"> اتو مخزن&zwnj;دار</a> <a class="form-group level2" href="cleaning-and-ironing/iron/steam-iron.html">اتو بخار</a>&nbsp; <a class="form-group level2">&nbsp;</a> <a class="form-group level2">&nbsp;</a>&nbsp;</div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 form-group"></div>
+                    <div class="mb-footer col-xs-12"><p><img height="192" src="{% static 'sanjekish/media/wysiwyg/simplegreat/MegaMenu/cleaning.png' %}" style="position: absolute; z-index: 2; bottom: -27px; left: -56px;" width="272" /></p></div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-level0 nav-9" id="nav-9">
+            <a class="mb-label mb-click col-xs-12 text-left" >حرارتی،برودتی و تصفیه<span class="glyphicon small glyphicon-plus">&nbsp;</span></a>
+            <div class="mb-submenu blind" id="submenu-9">
+                <div class="mb-submain col-xs-12">
+                    <div class="mb-content form-group">
+                        <div class="mb-maincontent col-sm-0 col-xs-12"style="display:none;">
+                            <div class="row ms-category-level">
+                                <div class="col-category col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="cooling-heating-purifier/heating.html">گرمایشی</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooling-heating-purifier/heating/radiator.html">رادیاتور</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooling-heating-purifier/heating/heating-fan.html">فن گرمایشی</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="cooling-heating-purifier/cooling-heating-fan.html">فن سرمایشی و گرمایشی</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooling-heating-purifier/cooling-heating-fan/cooling-fan.html">فن سرمایشی </a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooling-heating-purifier/cooling-heating-fan/humidifier.html">رطوبت ساز</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="cooling-heating-purifier/fan.html">پنکه</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooling-heating-purifier/fan/stand-fan.html">پنکه ایستاده</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooling-heating-purifier/fan/desktop-fan.html">پنکه رومیزی</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="cooling-heating-purifier/purifiers.html">تصفیه کننده‌ها</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooling-heating-purifier/purifiers/water-purification.html">تصفیه آب</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="cooling-heating-purifier/purifiers/air-conditioner.html">تصفیه هوا</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden-lg hidden-md hidden-sm col-xs-12 form-group"></div>
+                        <div class="mb-featured col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-sm-12"><div class="col-category col-sm-3 col-md-3 col-xs-12"><a class="form-group level1" href="cooling-heating-purifier/heating.html" style="color: #0555a4;">گرمایشی</a> <a class="form-group level2" href="cooling-heating-purifier/heating/radiator.html">رادیاتور(شوفاژ برقی)</a> <a class="form-group level2" href="cooling-heating-purifier/heating/heating-fan.html">فن گرمایشی(هیتر)</a></div>
+                                    <div class="col-category col-sm-3 col-md-3 col-xs-12"><a class="form-group level1" href="cooling-heating-purifier/cooling-heating-fan.html" style="color: #0555a4;">سرمایشی و گرمایشی</a> <a class="form-group level2" href="cooling-heating-purifier/cooling-heating-fan/cooling-fan.html"> فن سرمایشی و گرمایشی </a> <a class="form-group level2" href="cooling-heating-purifier/cooling-heating-fan/humidifier.html">رطوبت ساز</a></div>
+                                    <div class="col-category col-sm-3 col-md-3 col-xs-12"><a class="form-group level1" href="cooling-heating-purifier/fan.html" style="color: #0555a4;">پنکه</a> <a class="form-group level2" href="cooling-heating-purifier/fan/stand-fan.html">پنکه ایستاده</a></div>
+                                    <div class="col-category col-sm-3 col-md-3 col-xs-12"><a class="form-group level1" href="cooling-heating-purifier/purifiers.html" style="color: #0555a4;">تصفیه کننده&zwnj;ها</a> <a class="form-group level2" href="cooling-heating-purifier/purifiers/air-conditioner.html">تصفیه هوا</a> <a class="form-group level2" href="cooling-heating-purifier/purifiers/water-purification.html">تصفیه آب</a> <a class="form-group level2">&nbsp;</a> <a class="form-group level2">&nbsp;</a> <a class="form-group level2">&nbsp;</a> <a class="form-group level2">&nbsp;</a> <a class="form-group level2">&nbsp;</a></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 form-group"></div>
+                    <div class="mb-footer col-xs-12"><p><img height="192" src="{% static 'sanjekish/media/wysiwyg/simplegreat/MegaMenu/cooling-heating.png' %}" style="position: absolute; z-index: 2; bottom: -27px; left: -56px;" width="272" /></p></div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-level0 nav-27" id="nav-27">
+            <a class="mb-label mb-click col-xs-12 text-left" >لوازم شخصی برقی<span class="glyphicon small glyphicon-plus">&nbsp;</span></a>
+            <div class="mb-submenu blind" id="submenu-27">
+                <div class="mb-submain col-xs-12">
+                    <div class="mb-content form-group">
+                        <div class="mb-maincontent col-sm-0 col-xs-12"style="display:none;">
+                            <div class="row ms-category-level">
+                                <div class="col-category col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="personal-care/hairdryer.html">سشوار</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="personal-care/hairdryer/hairdryer.html">سشوار</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="personal-care/hairdryer/travel-hairdryer.html">سشوار مسافرتی</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="personal-care/hair-straighteners.html">اتو مو</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="personal-care/hair-straighteners/hair-straighteners.html">اتو مو</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="personal-care/hair-straighteners/hair-straightener.html">برس صاف کننده مو</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="personal-care/shaving-machine.html">ماشین اصلاح</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="personal-care/shaving-machine/shaving-machine.html">ماشین اصلاح آقایان</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="personal-care/shaving-machine/womens-correction-machine.html">ماشین اصلاح بانوان</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="personal-care/cosmetic.html">آرایشی</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="personal-care/cosmetic/electric-rock.html">سنگ پا برقی</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="personal-care/cosmetic/paraguarlas.html">پرزگیر لباس</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="personal-care/cosmetic/manicure.html">ست مانیکور و پدیکور</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden-lg hidden-md hidden-sm col-xs-12 form-group"></div>
+                        <div class="mb-featured col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-sm-12"><div class="col-category col-sm-3 col-md-3 col-xs-12"><a class="form-group level1" href="personal-care/hairdryer.html" style="color: #a9325a;"><img height="42" src="media/wysiwyg/Promotions/hair-dryer.png" style="margin-right: -8px; margin-left: 2px;" width="42" /><span style="vertical-align: bottom;">سشوار</span></a> <a class="form-group level2" href="personal-care/hairdryer/hairdryer.html">سشوار</a> <a class="form-group level2" href="personal-care/hairdryer/travel-hairdryer.html">سشوار مسافرتی</a></div>
+                                    <div class="col-category col-sm-3 col-md-3 col-xs-12"><a class="form-group level1" href="personal-care/hair-straighteners.html" style="color: #a9325a;"><img height="42" src="media/wysiwyg/Promotions/hair-iron.png" style="margin-right: -8px; margin-left: 2px;" width="42" /><span style="vertical-align: bottom;"> اتو مو</span></a> <a class="form-group level2" href="personal-care/hair-straighteners/hair-straighteners.html">اتو مو</a> <a class="form-group level2" href="personal-care/hair-straighteners/hair-straightener.html">برس صاف کننده مو</a></div>
+                                    <div class="col-category col-sm-3 col-md-3 col-xs-12"><a class="form-group level1" href="personal-care/shaving-machine.html" style="color: #a9325a;"><img height="42" src="media/wysiwyg/Promotions/trimmer.png" style="margin-right: -8px; margin-left: 2px;" width="42" /><span style="vertical-align: bottom;"> ماشین اصلاح</span></a> <a class="form-group level2" href="personal-care/shaving-machine/shaving-machine.html">ماشین اصلاح آقایان</a> <a class="form-group level2" href="personal-care/shaving-machine/womens-correction-machine.html">ماشین اصلاح بانوان</a></div>
+                                    <div class="col-category col-sm-3 col-md-3 col-xs-12"><a class="form-group level1" href="personal-care/cosmetic.html" style="color: #a9325a;"><img height="42" src="media/wysiwyg/Promotions/make-up.png" style="margin-right: -8px; margin-left: 2px;" width="42" /><span style="vertical-align: bottom;"> آرایشی</span></a> <a class="form-group level2" href="personal-care/cosmetic/electric-rock.html">سنگ پا برقی</a> <a class="form-group level2" href="personal-care/cosmetic/paraguarlas.html">پرزگیر لباس</a> <a class="form-group level2" href="personal-care/cosmetic/manicure.html">ست مانیکور و پدیکور</a> <a class="form-group level2">&nbsp;</a> <a class="form-group level2">&nbsp;</a> <a class="form-group level2">&nbsp;</a> <a class="form-group level2">&nbsp;</a> <a class="form-group level2">&nbsp;</a></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 form-group"></div>
+                    <div class="mb-footer col-xs-12"><p><img height="192" src="{% static 'sanjekish/media/wysiwyg/simplegreat/MegaMenu/personal-care.png' %}" style="position: absolute; z-index: 2; bottom: -27px; left: -56px;" width="272" /></p></div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-level0 nav-10" id="nav-10">
+            <a class="mb-label mb-click col-xs-12 text-left" >ترازوها<span class="glyphicon small glyphicon-plus">&nbsp;</span></a>
+            <div class="mb-submenu blind" id="submenu-10">
+                <div class="mb-submain col-xs-12">
+                    <div class="mb-content form-group">
+                        <div class="mb-maincontent col-sm-0 col-xs-12"style="display:none;">
+                            <div class="row ms-category-level">
+                                <div class="col-category col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="scales/scales.html">ترازوها</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="scales/scales/personal-scale.html">فردی</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="scales/scales/kitchen-scale.html">آشپزخانه</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden-lg hidden-md hidden-sm col-xs-12 form-group"></div>
+                        <div class="mb-featured col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-sm-12"><div class="col-category col-sm-2 col-md-2 col-xs-12"></div>
+                                    <div class="col-category col-sm-2 col-md-2 col-xs-12"></div>
+                                    <div class="col-category col-sm-2 col-md-2 col-xs-12"></div>
+                                    <div class="col-category col-sm-2 col-md-2 col-xs-12"><a class="form-group level1" href="scales/scales.html" style="color: #a9325a;">ترازوها</a><a class="form-group level2" href="scales/scales/kitchen-scale.html">آشپزخانه</a> <a class="form-group level2" href="scales/scales/personal-scale.html">فردی</a></div>
+                                    <style><!--
+                                    .ms-footer, .mb-footer{
+                                        border: 0 !important;
+                                    }
+                                    --></style></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 form-group"></div>
+                    <div class="mb-footer col-xs-12"><p><img height="192" src="{% static 'sanjekish/media/wysiwyg/simplegreat/MegaMenu/scales.png' %}" style="position: absolute; z-index: 2; bottom: -35px; left: -50px;" width="272" /></p></div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-level0 nav-28" id="nav-28">
+            <a class="mb-label mb-click col-xs-12 text-left" >لوازم جانبی و قطعات مصرفی<span class="glyphicon small glyphicon-plus">&nbsp;</span></a>
+            <div class="mb-submenu blind" id="submenu-28">
+                <div class="mb-submain col-xs-12">
+                    <div class="mb-content form-group">
+                        <div class="mb-maincontent col-sm-0 col-xs-12"style="display:none;">
+                            <div class="row ms-category-level">
+                                <div class="col-category col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="accessories/food-processor-accessories.html">غذاساز ها</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="accessories/food-processor-accessories/fruit-juicer-accessories.html">لوازم جانبی آب میوه گیری و آب مرکبات گیری</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="accessories/hot-beverage-accessories.html">نوشیدنی گرم </a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="accessories/hot-beverage-accessories/tea-maker-accessories.html">لوازم جانبی چای ساز</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level parent">
+                                            <p class="form-group"><a href="accessories/cooking-accessories.html">پخت و پز</a><small class="mb-level-click glyphicon glyphicon-plus small">&nbsp;</small></p>
+                                            <div class="col-xs-12 col-sub">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="accessories/cooking-accessories/microwave-and-oven-accessories.html">لوازم جانبی مایکروویو و آون</a>
+                                                    </div>
+                                                    <div class="col-xs-12">
+                                                        <a class="form-group" href="accessories/cooking-accessories/sandwich-maker-and-grill-accessories.html">لوازم جانبی ساندویچ ساز و گریل</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-level ">
+                                            <a class="form-group" href="accessories/cleaning-ironing-accessories.html">نظافت و اتوکشی</a>
+                                        </div>
+                                        <div class="col-xs-12 col-level ">
+                                            <a class="form-group" href="accessories/heating-cooling-accessories.html">حرارتی،برودتی و تصفیه</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden-lg hidden-md hidden-sm col-xs-12 form-group"></div>
+                        <div class="mb-featured col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-sm-12"><div class="col-category col-sm-2 col-md-2 col-xs-12"><a class="form-group level1" href="accessories/food-processor-accessories.html" style="color: #579642;">غذاساز</a> <a class="form-group level2" href="accessories/food-processor-accessories/food-processor-accessories-two.html">غذاساز</a> <a class="form-group level2" href="accessories/food-processor-accessories/fruit-juicer-accessories.html">آب میوه گیری و آب مرکبات گیری</a> <a class="form-group level2" href="accessories/food-processor-accessories/food-mixer-accessories.html">همزن</a></div>
+                                    <div class="col-category col-sm-2 col-md-2 col-xs-12"><a class="form-group level1" href="accessories/hot-beverage-accessories.html" style="color: #591d0c;">نوشیدنی گرم</a> <a class="form-group level2" href="accessories/hot-beverage-accessories/coffee-maker-accessories.html">قهوه ساز</a> <a class="form-group level2" href="accessories/hot-beverage-accessories/tea-maker-accessories.html">چایی ساز </a> <a class="form-group level2" href="accessories/hot-beverage-accessories/electric-kettle-accessories.html">کتری برقی</a> &nbsp;</div>
+                                    <div class="col-category col-sm-2 col-md-2 col-xs-12"><a class="form-group level1" href="accessories/cooking-accessories.html" style="color: #de772c;">پخت و پز</a> <a class="form-group level2" href="accessories/cooking-accessories/microwave-and-oven-accessories.html">ماکروویو و آون</a> <a class="form-group level2" href="accessories/cooking-accessories/sandwich-maker-and-grill-accessories.html">ساندویج ساز و گریل</a> <a class="form-group level2" href="accessories/cooking-accessories/fryer-accessories.html">سرخ کن و مولتی فرای</a> <a class="form-group level2" href="accessories/cooking-accessories/cooking-pot-accessories-two.html">پخت و پز</a> &nbsp;</div>
+                                    <div class="col-category col-sm-2 col-md-2 col-xs-12"><a class="form-group level1" href="accessories/cleaning-ironing-accessories.html" style="color: #2d2d82;">نظافت و اتوکشی</a> <a class="form-group level2" href="accessories/cleaning-ironing-accessories/vacuum-clean-accessories.html">جاروبرقی</a> <a class="form-group level2" href="accessories/cleaning-ironing-accessories/steam-clean-accessories.html">بخار شوی</a> <a class="form-group level2" href="accessories/cleaning-ironing-accessories/iron-accessories.html">اتو</a></div>
+                                    <div class="col-category col-sm-2 col-md-2 col-xs-12" style="border-left: 0 !important;"><a class="form-group level1" href="accessories/heating-cooling-accessories.html" style="color: #0555a4;">حرارتی،برودتی و تصفیه</a> <a class="form-group level2" href="accessories/heating-cooling-accessories/heating-accessories.html">گرمایشی</a> <a class="form-group level2" href="accessories/heating-cooling-accessories/cooling-heating-fan-accessories.html">سرمایشی و گرمایشی</a> <a class="form-group level2" href="accessories/heating-cooling-accessories/fan-accessories.html">پنکه</a> <a class="form-group level2" href="accessories/heating-cooling-accessories/purifiers-accessories.html">تصفیه کننده ها</a></div>
+                                    <div class="col-category col-sm-2 col-md-2 col-xs-12" style="border-left: 0 !important;">
+                                        <a class="form-group level1" href="accessories/personal-care-accessories.html" style="color: #a9325a;"> <img height="42" src="media/wysiwyg/Promotions/hair-dryer.png" style="margin-right: -8px; margin-left: 2px; margin: 0 0 7px 7px;" width="42" />
+                                            <p style="margin-bottom: 0;">لوازم شخصی برقی</p></a>
+                                        <a class="form-group level2" href="accessories/personal-care-accessories/shaving-machine-accessories.html">ماشین اصلاح</a> <a class="form-group level2" href="accessories/personal-care-accessories/hairdryer-accessories.html">سشوار</a> <a class="form-group level2" href="accessories/personal-care-accessories/hair-straighteners-accessories.html">اتو مو</a> <a class="form-group level2" href="accessories/personal-care-accessories/cosmetic-accessories.html" style="margin-bottom: 78px;">آرایشی</a></div>
+                                    <style type="text/css"><!--
+                                    .col-category .level1[href*="/accessories/food-processor-accessories"]:before {
+                                        content: "\e911";
+                                        display: block;
+                                    }
+                                    .col-category .level1[href*="/accessories/hot-beverage-accessories"]:before {
+                                        content: "\e917";
+                                        display: block;
+                                    }
+                                    .col-category .level1[href*="/accessories/cooking-accessories"]:before {
+                                        content: "\e906";
+                                        display: block;
+                                    }
+                                    .col-category .level1[href*="/accessories/cleaning-ironing-accessories"]:before {
+                                        content: "\e903";
+                                        display: block;
+                                    }
+                                    .col-category .level1[href*="/accessories/heating-cooling-accessories"]:before {
+                                        content: "\e90d";
+                                        display: block;
+                                    }
+                                    --></style></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 form-group"></div>
+                    <div class="mb-footer col-xs-12"><p><img height="192" src="{% static 'sanjekish/media/wysiwyg/simplegreat/MegaMenu/cleaning-Acc.png' %}" style="position: absolute; z-index: 2; bottom: -27px; left: -56px;" width="272" /></p></div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-level0 nav-13" id="nav-13">
+            <a class="mb-label mb-click col-xs-12 text-left" >خدمات پس‌از‌فروش<span class="glyphicon small glyphicon-plus">&nbsp;</span></a>
+            <div class="mb-submenu blind" id="submenu-13">
+                <div class="mb-submain col-xs-12">
+                    <div class="mb-content form-group">
+                        <div class="mb-maincontent col-sm-9 col-xs-12">
+                            <ul>
+                                <li><a href="support.html">نمایندگیهای خدمات پس از فروش</a></li>
+                                <li><a href="http://2328.ir/Consoles/Ware/" target="_blank">ثبت سفارش</a></li>
+                                <li><a href="http://2328.ir/Consoles/Ware/FollowUp/" target="_blank">پیگیری&nbsp;سفارش</a></li>
+                                <li><a href="http://2328.ir/Consoles/WorkShopCenter/" target="_blank">اطلاع از وضعیت سرویس</a></li>
+                                <li><a href="post.html">خدمات پس از فروش از طریق پست</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group"></div>
+</div>
+<script>
+    /*-- init variable --*/
+    var topmenu = null;
+    var mbmenu = null;
+    var arr_width =[];
+    var $mega = jQuery.noConflict();
+    var type_menu = parseInt('2');
+    var topmenu_effect = parseInt('1');
+    var width_change = parseInt('779');
+    var mobile_effect = parseInt('1');
+    var isMobileMegamenu = navigator.userAgent.match(/iPhone|iPad|iPod/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Opera Mini/i) || navigator.userAgent.match(/IEMobile/i);
+    if(type_menu != 1){
+        var pc_megamenu = $mega('.megamenu-pc')
+        topmenu = $mega('#ms-topmenu');
+        var label = $mega('#ms-topmenu .ms-label');
+        var label_hassub = $mega('#ms-topmenu .ms-hassubmenu');
+        var ms_level0 = $mega('#ms-topmenu .ms-level0');
+        var sub_left = $mega('#ms-topmenu .sub_left');
+        var sub_right = $mega('#ms-topmenu .sub_right');
+        arr_width['0']=parseInt('100');
+        arr_width['1']=parseInt('100');
+        arr_width['2']=parseInt('100');
+        arr_width['3']=parseInt('100');
+        arr_width['4']=parseInt('100');
+        arr_width['5']=parseInt('100');
+        arr_width['6']=parseInt('100');
+        arr_width['7']=parseInt('100');
+        arr_width['8']=parseInt('100');
+        arr_width['9']=parseInt('20');
+    }
+    if(type_menu != 0){
+        var mb_megamenu = $mega('.megamenu-mobile');
+        mbmenu = $mega('#mb-topmenu');
+        var mclick = $mega('#mb-topmenu .mb-click');
+        var mreturn = $mega('#mb-topmenu .mb-return');
+        var anchor = $mega('.anchor_mbmenu .anchor_mbmenu_text');
+    }
+</script>
+<!-- search -->
+<div class="top-bar"><form id="search_mini_form" action="https://sanjehkish.com/catalogsearch/result/" method="get"
+                           class="searchautocomplete UI-SEARCHAUTOCOMPLETE"
+                           data-tip="جستجو کنید..."
+                           data-url="//sanjehkish.com/searchautocomplete/ajax/get/"
+                           data-minchars="2"
+                           data-delay="500">
+    <div class="form-search">
+        <input id="search" type="text" autocomplete="off" name="q" value="" class="input-text UI-SEARCH UI-NAV-INPUT" maxlength="128" />
+        <button type="submit" title="جستجو" class="button search-button">
+            <span><i class="fa fa-search"></i></span>
+        </button>
+        <div class="searchautocomplete-loader UI-LOADER">
+            <div id="g01"></div>
+            <div id="g02"></div>
+            <div id="g03"></div>
+            <div id="g04"></div>
+            <div id="g05"></div>
+            <div id="g06"></div>
+            <div id="g07"></div>
+            <div id="g08"></div>
+        </div>
+        <div style="display:none" id="search_autocomplete" class="UI-PLACEHOLDER search-autocomplete searchautocomplete-placeholder"></div>
+    </div>
+</form>
+    <style>
+        .form-search .search-autocomplete li {
+            text-align: center;
+            border-bottom: 1px dotted #eee;}
+    </style>
+    <!--
+    <style>
+    #search_autocomplete{
+    width: 333px;
+    border: 1px solid #eee;
+    margin-top: 0;
+    }
+    #search_autocomplete .price-box{
+    text-align: left;
+    padding: 0 10px;
+    }
+    #search_autocomplete .price-box .regular-price .price {
+    font-size: 13px;
+    }
+    #search_autocomplete .highlight{
+    display: inline-block;
+    text-align: right;
+    float: right;
+    width: 230px;
+    padding: 5px;
+    color: #777;
+    }
+    #search_autocomplete .searchautocomlete-image{
+    display: inline-block;
+    float: left;
+    width: 70px;
+    }
+    #search_autocomplete li{
+    border-bottom: 1px dotted #eee;
+    }
+    #search_autocomplete .price-box{
+    float: left;
+    }
+    @media screen and (max-width: 768px){
+    #search_autocomplete {
+    display: block;
+    width: 273px;
+    }
+    #search_autocomplete .highlight {
+    width: unset;
+    }
+    }
+    </style> -->
+</div>
+<!-- / search -->
+<body>
+{% block slider %}
+{% endblock %}
+{#<div class="page home" id="page-container" >#}
+{% block page_content %}
+{% endblock %}
+<div class="footer-container">
+    <div class="additional-footer">
+        <!-- simplegreat footer -->
+        <div id="footer">
+            <div id="message"><a href="#top" id="top-link"></a></div>
+            <!-- columns -->
+            <div class="namad-netweb"></div>
+            <div class="column footer-netweb">
+                <h3 style="color: #f6f7f8; font-size: 14px;">راهنما</h3>
+                <ul>
+                    {% show_pages %}
+                    {#                    <li style="color: #a3a8a9; font-size: 12px;"><a href="{% url 'about_us:home' %}">درباره ما</a></li>#}
+                    {#                    <li style="color: #a3a8a9; font-size: 12px;"><a href="policies.html">قوانین و مقررات</a></li>#}
+                    {#                    <li style="color: #a3a8a9; font-size: 12px;"><a href="order-policy.html">مراحل ثبت سفارش و خرید</a></li>#}
+                    {#                    <li style="color: #a3a8a9; font-size: 12px;"><a href="delivery-method.html">نکات مهم در هنگام تحویل سفارش</a></li>#}
+                </ul>
+            </div>
+            <div class="column footer-netweb">
+                <h3 style="color: #f6f7f8; font-size: 14px;">خدمات مشتریان</h3>
+                <ul>
+                    <li style="color: #a3a8a9; font-size: 12px;"><a href="#">ثبت شکایات</a></li>
+                    <li style="color: #a3a8a9; font-size: 12px;"><a href="#">شرایط بازگشت کالا</a></li>
+                    <li style="color: #a3a8a9; font-size: 12px;"><a href="#">شرایط حمل و تحویل کالا</a></li>
+                    <li style="color: #a3a8a9; font-size: 12px;"><a href="#" target="_self">فرم نظر سنجی از مشتریان</a></li>
+                </ul>
+            </div>
+            <div class="column footer-netweb">
+                <h3 style="color: #f6f7f8; font-size: 14px;">پیشنهادات ویژه</h3>
+                <ul>
+                    <li style="color: #a3a8a9; font-size: 12px;"><a href="{% url 'brands:brand' %}">برندها</a></li>
+                    <li style="color: #a3a8a9; font-size: 12px;"><a href="{% url 'pages:page_detail' 'careers' %}" target="_self">فرصت های شغلی</a></li>
+                    <li style="color: #a3a8a9; font-size: 12px;"><a href="#">راهنمای خرید</a></li>
+                </ul>
+            </div>
+            <div class="column footer-netweb">
+                <h3 style="color: #f6f7f8; font-size: 14px;">ارتباط با ما</h3>
+                <div class="custom-footer-contact" style="text-align: right;">
+                    <div class="address">
+                        <div class="contact-icon">&nbsp;</div>
+                        <div class="info" style="color: #a3a8a9; font-size: 12px;">تهران، بزرگراه رسالت شرق، ساختمان سرسبز،پلاک 531،طبقه 3 واحد 9</div>
+                    </div>
+                    <div class="phone" dir="rtl">
+                        <div class="contact-icon">&nbsp;</div>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; ۷۷١۹۴۴۷۵ - ۰٢١  |  ۷۷١۹۴۴۷۵ - ۰٢١
+                    </div>
+                    <div class="email">
+                        <div class="contact-icon"></div>
+                        <div class="info" style="color: #a3a8a9; font-size: 12px;"><a href="mailto:info@radmehr-co.com">info@radmehr-co.com</a></div>
+                        <div class="info" style="color: #a3a8a9; font-size: 12px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / simplegreat footer -->
+</div>
+<div class="footer-misc">
+    <div class="footer-social clearfix">
+<span>
+<a href="https://instagram.com/radmehrco" target="_blank"><i class="fa fa-instagram"></i></a>
+<a href="http://www.aparat.com/radmehrco" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104.2 103.7" enable-background="new 0 0 104.2 103.7"><path class="st0" d="M51.7 6.4c25.2 0 45.6 20.4 45.6 45.6s-20.4 45.7-45.6 45.7-45.7-20.4-45.7-45.6 20.5-45.7 45.7-45.7zm-.2 40.4c-3.2 0-5.8 2.6-5.8 5.8 0 3.2 2.6 5.8 5.8 5.8 3.2 0 5.8-2.6 5.8-5.8.1-3.2-2.5-5.8-5.8-5.8zm13.6 12.8c-7 0-12.8 5.7-12.8 12.8s5.7 12.7 12.8 12.7 12.8-5.7 12.8-12.8-5.8-12.7-12.8-12.7zm6.3-34.1c-7 0-12.8 5.7-12.8 12.8s5.7 12.8 12.8 12.8c7 0 12.8-5.7 12.8-12.8s-5.8-12.8-12.8-12.8zm-32.3-6.3c-7 0-12.8 5.7-12.8 12.8s5.7 12.7 12.8 12.7c7 0 12.8-5.7 12.8-12.8s-5.8-12.7-12.8-12.7zm-6.8 34.2c-7 0-12.8 5.7-12.8 12.8s5.7 12.8 12.8 12.8 12.7-5.8 12.7-12.8-5.7-12.8-12.7-12.8zM101.1 44.5c-3.1-12.9-6.2-21-17.6-30.5 7.8 1 14.2 2.4 18.3 8.7 4.1 6.3 2.2 14.2-.7 21.8zM91.1 82.2c-8.9 9.9-15.6 15.4-30.1 18.4 7.3 2.9 13.6 4.7 20.2 1.2 6.6-3.6 8.8-11.5 9.9-19.6zM2.5 60.8c3.6 12.8 7.1 20.7 18.8 29.8-7.9-.7-14.3-1.8-18.6-7.9-4.3-6.1-2.7-14.1-.2-21.9zM13.1 20.8c9.3-9.5 16.1-14.8 30.8-17.2-7.2-3.2-13.4-5.3-20.2-2-6.7 3.4-9.2 11.2-10.6 19.2z"></path></svg></a>
+</span>
+    </div>
+</div>
+</div></div>
+<div class="footer-wrapper">
+    <div class="footer">
+        <div class="footer-links">
+            <ul>
+                <li><a href="{% url 'pages:page_detail' 'about-us' %}">درباره ما</a></li>
+                <li><a href="{% url 'pages:page_detail' 'branch-request' %}">درخواست نمایندگی</a></li>
+                <li class="last privacy"><a href="#">حریم خصوصی</a></li>
+            </ul> <span class="footer-copy">تمامی خدمات این وب سایت، دارای مجوزهای لازم از مراجع مربوطه می باشد و فعالیت این سایت تابع قوانین و مقررات جمهوری اسلامی ایران است.
+کليه حقوق اين سايت متعلق به بازرگانی رادمهر می‌باشد.</span>
+        </div>
+    </div>
+</div>
+<div class="page"> <script type="text/javascript">
+    //<![CDATA[
+    iCart.init({
+        title: 'افزودن به',
+        cart: 'سبد خرید',
+        cartEdit: 'ویرایش',
+        wishlist: 'لیست دلخواه',
+        compare: 'مقایسه',
+        width: 500,
+        confirmDeleteCart: 'آیا کالا را از سبد خرید حذف می کنید ؟',
+        confirmDeleteWishlist: 'شما مطمئن‌اید که مایلید این محصول را از لیست دلخواه‌تان بردارید؟',
+        confirmDeleteCompare: 'آیا کالا را از لیست مقایسه حذف می‌کنید؟',
+        confirmClearCompare: 'آیا تمام محصولات را از لیست مقایسه حذف می‌کنید؟'
+    });
+    document.stopObserving('dom:loaded', Catalog.Map.bindProductForm);document.observe('dom:loaded', function(){iCart.updateLinks()});
+    try {
+        if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) { //ie8 fix
+            var ieVersion = new Number(RegExp.$1)
+            if (ieVersion >= 8) {
+                iCart.updateLinks()
+            }
+        }
+    } catch (err) {}
+    //]]>
+</script>
+    <script language="javascript" src="{% static 'sanjekish/js/megamenu/megamenu-atd.js' %}"></script>
+    <!-- PASS THRU DATA -->
+    <script type="text/javascript">
+        var lz_data = {language:'fa'};
+    </script>
+    <!-- PASS THRU DATA -->
+</div>
+</body>
+</html>
