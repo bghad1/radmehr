@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'about_us.apps.AboutusConfig',
     # 'contact_us.apps.ContactusConfig',
     'page.apps.PageConfig',
-    'menu.apps.MenuConfig',
+    # 'menu.apps.MenuConfig',
     'event.apps.EventConfig',
     'tinymce',
     'extensions',
@@ -86,7 +86,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'radmehr.wsgi.application'
 
-
+# python manage.py dumpdata --natural-foreign \
+#    --exclude auth.permission --exclude contenttypes \
+#    --indent 4 > mydata.json
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -96,6 +98,17 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3'
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'radmehr',
+#         'USER': 'postgres',
+#         'PASSWORD': 'bahador',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
 
 
 # Password validation
