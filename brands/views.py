@@ -20,9 +20,9 @@ def brand_view(request):
     return render(request, 'brand-sanje.html', context)
 
 
-def brand_detail_View(request, brand_name):
+def brand_detail_View(request, brand_slug):
     # show_brand = Brands.objects.filter(show_brand=True)
-    brand_detail = Brands.objects.get(brand_name=brand_name)
+    brand_detail = Brands.objects.get(brand_slug=brand_slug)
     # products = Products.objects.get(product_brand=brand_name)
     products = Products.objects.filter(product_brand=brand_detail)
     # brand_category = Brands.objects.get(brand_product_category=brand_name)

@@ -1,7 +1,7 @@
 {% load static %}
 {% for thebrand in latest_brands_menu %}
     <div class="col-category col-sm-3 col-md-3 col-xs-12">
-        <a class="form-group level1" href="{% url 'brands:brand_detail' thebrand.brand_name %}">
+        <a class="form-group level1" href="{% url 'brands:brand_detail' thebrand.brand_slug %}">
             <img height="28" src="{{ thebrand.brand_logo.url }}" width="70" />
             <span style="vertical-align: bottom;">&nbsp;{{ thebrand.brand_name }}</span></a>
     </div>

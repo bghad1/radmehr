@@ -4,6 +4,9 @@ from django.db import models
 # Create your models here.
 class Brands(models.Model):
     brand_name = models.CharField(max_length=120, verbose_name='نام برند')
+    brand_slug = models.SlugField(max_length=250,
+                            allow_unicode=True,
+                            verbose_name='آدرس لینک', null=True)
     brand_description = models.TextField(null=True, verbose_name='توضیح برند')
     brand_logo = models.ImageField(upload_to='img/logo/', verbose_name='تصویر لوگو')
     brand_product_category = models.ManyToManyField('ProductCategory',
